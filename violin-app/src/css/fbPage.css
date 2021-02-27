@@ -1,0 +1,52 @@
+.fbMainDiv{
+    background-color: #0C090A;
+}
+.fbPage{
+    display: flex;
+    align-items: center;
+    margin-top: -50px;
+}
+.fbName{
+    font-size: 100px;
+    margin: 0;
+    color: rgb(101, 101, 240);
+}
+.fbIcon{
+    color: rgb(101, 101, 240);
+}
+.fbPostBox{
+    display: flex;
+    justify-content: center;
+}
+.imgImg{
+    width: 350px;
+}
+
+.imgWrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+  
+.imgDescription {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: gray;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+    width: 350px;
+    height: 445px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    text-indent: 15px;
+}
+.imgWrap:hover .imgDescription {
+    visibility: visible;
+    opacity: .8;
+}

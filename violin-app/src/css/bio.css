@@ -1,0 +1,41 @@
+.bioContainer-dark{
+    background-color: #242526;
+}
+.backColor{
+    background-color: #FBBBB9;
+}
+.backColor-dark{
+    background-color: #242526;
+}
+.bioText{
+    text-indent: 15px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    text-align: justify;
+}
+.bioText-dark{
+    color: white;
+    font-weight: bold;
+}
+
+.bioName{
+    stroke: aliceblue;
+}
+
+@media (max-width: 960px) {
+    .bioImage{
+        width: 100%;
+        width: 430px;
+    }
+    .bioImageGrid{
+        width: 100%;
+    }
+    .bioPhoto{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .bioText{
+        padding-bottom: 1000px;
+    }
+}

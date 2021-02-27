@@ -1,0 +1,84 @@
+.contactDiv{
+    border-top: 1px solid black;
+}
+.contactDiv-dark{
+    border-top: 1px solid white;
+    background-color: #2C3539;
+}
+.contactText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: purple;
+}
+.contactField{
+    background-color: #f6f6f6;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.contactField-dark{
+    background-color: #4F4F4F;
+}
+.fieldBlock-dark{
+    background-color: white;
+}
+.fieldBlock-dark label{
+    background-color: white;
+}
+.submitBtn{
+    width: 50px;
+}
+.contactSocialText{
+    background-color: #f6f6f6;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 30px 5px 30px 5px;
+}
+.contactSocialText-dark{
+    background-color: #4F4F4F;
+    color: white;
+}
+.socialLink{
+    display: flex;
+    flex-direction: row;
+    transition: all .5s ;
+}
+.socialLink:hover{
+    font-size: 20px;
+}
+.fbShare,
+.instaShare,
+.youTubeShare,
+.tweeterShare
+{
+    width: 50px;
+}
+.fbShareName,
+.instaShareName,
+.youTubeShareName,
+.tweeterShareName
+{
+    text-decoration: underline;
+}
+.fbShareName-dark,
+.instaShareName-dark,
+.youTubeShareName-dark,
+.tweeterShareName-dark{
+    color: white;
+}
+.tweeterShareName,
+.youTubeShareName{
+    margin-left: 5px;
+}
+.mapBox{
+    background-color: seashell;
+    display: block;
+}
+.mapBox-dark{
+    background-color: #8C8C8C;
+}
