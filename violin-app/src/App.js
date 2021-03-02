@@ -8,25 +8,30 @@ import {
 import { useState } from 'react';
 import Footer from './screens/Footer';
 import Header from './screens/Header';
+import { QueryClient, QueryClientProvider } from 'react-query'
+ 
+ const queryClient = new QueryClient()
 
 function App() {
   
   const [currentTheme, setCurrentTheme] = useState('light');
   
   return (
-    <ThemeContext.Provider value={{currentTheme, setCurrentTheme}}>
-      <Router>
-        <div>
-          <header className={`App-header-${currentTheme}`}>
-            <Header />
-          </header>
-            <Home />
-          <footer>
-            <Footer />
-          </footer>
-        </div>
-      </Router>
-    </ThemeContext.Provider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeContext.Provider value={{currentTheme, setCurrentTheme}}>
+        <Router>
+          <div>
+            <header className={`App-header-${currentTheme}`}>
+              <Header />
+            </header>
+              <Home />
+            <footer>
+              <Footer />
+            </footer>
+          </div>
+        </Router>
+      </ThemeContext.Provider>
+    </QueryClientProvider>
   );
 }
 

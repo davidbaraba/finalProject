@@ -1,10 +1,18 @@
-import { Container } from '@material-ui/core';
+import '../css/post.css';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import  PressPhoto_Concert from '../photos/PressPhoto_Concert.jpg';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import Comments from './Comments';
+import { useTranslation } from 'react-i18next';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import ThemeContext from '../ThemeContext';
 
 export default function Post(){
+
+    const {currentTheme} = useContext(ThemeContext);
+
+    const {t} = useTranslation();
 
     const params = useParams();
 
@@ -18,10 +26,38 @@ export default function Post(){
     }, [])
     
     return(
-        <div>
-            <h1>{posts.title}</h1>
-            {/* <img src={PressPhoto_Concert} alt="logo" /> */}
-            <p>{posts.content}</p>
+        <div className={`postMainDiv postMainDiv-${currentTheme}`}>
+            <h1 className={`postTitle postTitle-${currentTheme}`}>{posts.title}</h1>
+            <img className="postImg" src={posts.media} alt="logo" />
+            <h3>
+                <a target="_blank" className="postLink" href={posts.fbPost}>
+                <FacebookIcon
+                    className="pressFbIcon"
+                    style={{ fontSize: 50 }}
+                />
+                <p className="pressFbLink">
+                    {t('redirectfbArticle')}
+                </p>
+                
+                </a>
+            </h3>
+            <div className={`postTextCom postTextCom-${currentTheme}`}>
+                <p className={`postText postText-${currentTheme}`}>{posts.content}</p>
+                <div className="addCommentDiv">
+                    <input 
+                        placeholder={t('writeComment')}
+                        type="text"
+                        className="addCommentInp"
+                    />
+                    <button className={`addCommentBtn addCommentBtn-${currentTheme}`}>
+                        <AddCircleIcon
+                            className="fbIcon"
+                            style={{ fontSize: 40 }}
+                        />
+                    </button>
+                </div>
+                <Comments postId={params.id} />
+            </div>
         </div>
     )
 }

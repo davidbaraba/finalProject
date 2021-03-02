@@ -15,6 +15,7 @@ import Iframe from 'react-iframe';
 import { useContext } from 'react';
 import ThemeContext from '../ThemeContext';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -40,6 +41,9 @@ export default function Contact(){
 
     return(
         <div className={`contactDiv contactDiv-${currentTheme}`}>
+        <Helmet>
+            <title>TinaViolin-B/contact</title>
+        </Helmet>
             <Container maxWidth="lg">
                 <h1 className="contactText" style={{ backgroundImage: `url(${contactBackgroundPhoto})` }}>{t('contact_me')}</h1>
                 <Grid container spacing={3}>

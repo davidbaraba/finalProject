@@ -4,23 +4,20 @@ import Bio from './Bio';
 import Account from './Account';
 import {
     Switch,
-    Route,
-    Link
+    Route
   } from "react-router-dom";
-import Header from "./Header";
 import MainPage from './MainPage';
 import Post from './Post';
-import Test from './Test';
-import MainPress from './MainPress';
 import MainVideo from './MainVideo';
 import FbPage from './FbPage';
 import InstaPage from './InstaPage';
+import Photo from './Photo';
+import Video from './Video';
+import Audio from './Audio';
 
 export default function Home(){
     return(
         <div>
-            {/* <Header /> */}
-
             <Switch>
                 <Route path='/account'>
                     <Account />
@@ -28,13 +25,19 @@ export default function Home(){
                 <Route path='/contact'>
                     <Contact />
                 </Route>
-                <Route path='/media'>
-                    media page
+                <Route path='/photo'>
+                    <Photo />
                 </Route>
-                <Route path='/press/:id'>
+                <Route path='/video'>
+                    <Video />
+                </Route>
+                <Route path='/audio'>
+                    <Audio />
+                </Route>
+                <Route exact path='/press/post/:id'>
                     <Post />
                 </Route>
-                <Route path='/press'>
+                <Route path='/press/:page?'>
                     <Press />
                 </Route>
                 <Route path='/bio'>
@@ -42,7 +45,6 @@ export default function Home(){
                 </Route>
                 <Route path='/'>
                     <MainPage />
-                    {/* <Test /> */}
                     {/* <MainPress /> */}
                     <MainVideo />
                     <FbPage />

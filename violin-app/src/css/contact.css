@@ -80,5 +80,6 @@
     display: block;
 }
 .mapBox-dark{
-    background-color: #8C8C8C;
+    background-color: #2C3539;
+    border-top: .5px solid white;
 }

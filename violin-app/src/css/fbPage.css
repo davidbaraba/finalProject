@@ -13,6 +13,16 @@
 }
 .fbIcon{
     color: rgb(101, 101, 240);
+    display: flex;
+    align-items: center;
+}
+.pressFbLink{
+    display: flex;
+    align-items: center;
+}
+.pressFbLink:hover{
+    color: red;
+    font-size: 20px;
 }
 .fbPostBox{
     display: flex;

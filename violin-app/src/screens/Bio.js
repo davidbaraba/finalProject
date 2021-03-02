@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import '../css/bio.css'
 import { useContext } from 'react';
 import ThemeContext from '../ThemeContext';
+import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles((theme) => ({
     biographyPhoto: {
@@ -38,6 +39,9 @@ export default function AboutMe(){
 
     return(
         <Container maxWidth="xl" className={`bioContainer-${currentTheme}`}>
+        <Helmet>
+            <title>TinaViolin-B/biography</title>
+        </Helmet>
             <Grid container spacing={3}  className={`backColor backColor-${currentTheme}`} >
                 <Grid item md={5} className="bioImageGrid">
                     <div className="bioPhoto">

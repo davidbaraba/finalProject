@@ -60,3 +60,7 @@
 .footerIcons:hover{
     font-size: 30px;
 }
+
+@media only screen and (min-width: 960px) {
+    
+  }

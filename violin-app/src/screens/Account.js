@@ -9,6 +9,7 @@ import TextField from '@material-ui/core/TextField';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import { Button } from '@material-ui/core';
 import ThemeContext from '../ThemeContext';
+import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles((theme) => ({
     margin: {
@@ -43,6 +44,9 @@ export default function Login(){
 
     return (
         <div className="accountDiv" style={{ backgroundImage: `url(${violinBackground})` }}>
+            <Helmet>
+                <title>TinaViolin-B/account</title>
+            </Helmet>
             <form className={`accountForm accountForm-${currentTheme}`} action="" onSubmit={onsubmit}>
                 <h2 className="accountName">{t('login')}</h2>
                 <TextField

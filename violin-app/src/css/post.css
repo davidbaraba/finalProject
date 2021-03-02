@@ -1,0 +1,81 @@
+.postMainDiv{
+    border-top: 1px solid black;
+    background-color: #FFDFDD;
+}
+.postMainDiv-dark{
+    border-top: 1px solid white;
+    background-color: #2C3539;
+}
+.postTitle{
+    display: flex;
+    justify-content: center;
+}
+.postTitle-dark{
+    color: white;
+}
+.pressFbIcon{
+    color: rgb(101, 101, 240);
+}
+.postImg{
+    width: 500px;
+    margin-left: 30%;
+}
+.postText{
+    display: flex;
+    justify-content: center;
+    text-indent: 50px;
+    font-weight: bold;
+    text-align: justify;
+    padding: 15px;
+}
+.postText-dark{
+    color: white;
+}
+.postTextCom{
+    border: .1px;
+    border-style: dotted solid solid solid;
+    border-color: black;
+    margin: 20px 20px 0px 50px;
+}
+.postTextCom-dark{
+    border-color: white;
+}
+.postLink{
+    display: flex;
+    justify-content: center;
+}
+.addCommentInp::placeholder{
+    padding-left: 5px;
+    font-size: 15px;
+}
+.addCommentInp{
+    margin-left: 18px;
+    height: 33px;
+    width: 350px;
+    border-radius: 5px;
+    border: 1px solid slateblue;
+}
+.addCommentBtn{
+    border: none;
+    background-color: #FFDFDD;
+}
+.addCommentBtn-dark{
+    background-color: #2C3539;
+}
+.addCommentDiv{
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 960px) {
+    .postImg{
+        /* margin-left: 15%; */
+        width: 400px;
+    }
+}
+@media only screen and (max-width: 690px) {
+    .postImg{
+        /* margin-left: 8%; */
+        width: 250px;
+    }
+}

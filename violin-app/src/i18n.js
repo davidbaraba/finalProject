@@ -10,6 +10,9 @@ const resources = {
       "bio": "Biography",
       "press": "Press",
       "media": "Media",
+      "photo": "Photo",
+      "videoNav": "Video",
+      "audio": "Audio",
       "contact": "Contact",
       "theme-mode": "Dark Mode",
       "account": "Account",
@@ -24,7 +27,7 @@ const resources = {
       "rights": "All Rights Reserved ©2021",
       "privacy": "PRIVACY POLICY",
       "terms": "TERMS OF USE",
-      "contact": "Contact Me",
+      "contact": "Contact",
       // footer
       // contact
       "contact_me": "Contact me",
@@ -49,6 +52,16 @@ const resources = {
       "video": "Videos |",
       "visitYoutube": "Visit My YouTube Channnel",
       // videoPage
+      // pressPage
+      "pressPageTitle": "PRESS",
+      "readMoreBtn": "Read More",
+      "prevPage": "Prev Page",
+      "nextPage": "Next Page",
+      // pressPage
+      // postPage
+      "redirectfbArticle": "Read the article on Facebook",
+      "writeComment": "write a comment...",
+      // postPage
     }
   },
   ka: {
@@ -57,6 +70,9 @@ const resources = {
       "bio": "ბიოგრაფია",
       "press": "პრესა",
       "media": "მედია",
+      "photo": "ფოტო",
+      "videoNav": "ვიდეო",
+      "audio": "აუდიო",
       "contact": "კონტაქტი",
       "theme-mode": "ღამის რეჟიმი",
       "account": "ანგარიში",
@@ -96,6 +112,16 @@ const resources = {
       "video": "ვიდეოები |",
       "visitYoutube": "ეწვიეთ ჩემს YouTube არხს",
       // videoPage
+      // pressPage
+      "pressPageTitle": "პრესა",
+      "readMoreBtn": "მეტის წაკითხვა",
+      "prevPage": "წინა გვერდი",
+      "nextPage": "შემდეგი გვერდი",
+      // pressPage
+      // postPage
+      "redirectfbArticle": "წაიკითხე სტატია ფეისბუქზე",
+      "writeComment": "დაწერე კომენტარი...",
+      // postPage
     }
   }
 };

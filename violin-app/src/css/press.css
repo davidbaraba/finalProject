@@ -1,8 +1,41 @@
 .pressContainer{
     border-top: 1px solid black;
 }
+.pressContainer-dark{
+    background-color: #2C3539;
+    border-top: 1px solid white;
+}
+.postRootBoxBtn:hover{
+    color: #F52887!important;
+    font-size: 14px;
+}
+.postRootBoxBtn-dark{
+    background-color: gray!important;
+    color: white!important;
+}
+.postRootBox-dark{
+    background-color: #2C3539!important;
+    color: white!important;
+}
 .pressName{
     font-size: 100px;
     color: purple;
     font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 0;
+}
+
+.searchInt{
+    padding: 6px;
+    font-size: 17px;
+    /* border: none; */
+}
+.searchBtn{
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
 }

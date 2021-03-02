@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 import ChangeTheme from '../ChangeTheme';
 import { useContext } from 'react';
 import ThemeContext from '../ThemeContext';
+import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles({
     headerDiv: {
@@ -28,7 +29,7 @@ const useStyles = makeStyles({
     },
     navHeader: {
         display: 'flex',
-        listStyle: 'none'
+        listStyle: 'none',
     },
     accountDiv: {
         display: 'flex',
@@ -45,7 +46,10 @@ const useStyles = makeStyles({
     },
     listItem: {
         fontWeight: 'bold',
-        fontSize: '20px'
+        fontSize: '20px',
+        '&:hover': {
+            color: "#d3d3d3",
+          }
     }
 });
 
@@ -63,13 +67,16 @@ export default function Header(){
 
     return(
         <Container maxWidth="lg" className={classes.AppHeader} className={`headerBackground headerBackground-${currentTheme}`}>
+        <Helmet>
+            <title>TinaViolin-B</title>
+        </Helmet>
             <Grid container spacing={3} className={classes.headerDiv}>
                 <Grid item md={1} xs={12}>
-                    <Link to='/'>
+                    <Link to='/Home'>
                         <img src={violinLogo} className={`App-logo App-logo-${currentTheme}`} alt="logo" />
                     </Link>
                 </Grid>
-                <Grid item md={8} xs={12}>
+                <Grid item md={8} xs={12} className="navList">
                     <nav className={classes.navHeader}>
                         <ul className={classes.navHeader}>
                             <Link className={classes.listItem} to='/bio'><li>{t('bio')}</li></Link>
@@ -77,15 +84,25 @@ export default function Header(){
                         <ul className={classes.navHeader}>
                             <Link className={classes.listItem} to='/press'><li>{t('press')}</li></Link>
                         </ul>
-                        <ul className={classes.navHeader}>
+                        {/* <ul className={classes.navHeader}>
                             <Link className={classes.listItem} to='/media'><li>{t('media')}</li></Link>
+                        </ul> */}
+                        <ul className={classes.navHeader}>
+                        <div className="dropdown">
+                            <button className={`dropbtn dropbtn-${currentTheme}`}>{t('media')}</button>
+                                <div className="dropdown-content">
+                                <Link className="dropdownLink" to='/photo'><li>{t('photo')}</li></Link>
+                                <Link className="dropdownLink" to='/video'><li>{t('videoNav')}</li></Link>
+                                <Link className="dropdownLink" to='/audio'><li>{t('audio')}</li></Link>
+                            </div>
+                        </div>
                         </ul>
                         <ul className={classes.navHeader}>
                             <Link className={classes.listItem} to='/contact'><li>{t('contact')}</li></Link>
                         </ul>
                     </nav>
                 </Grid>
-                <Grid item md={1} xs={12} className={classes.accountDiv}>
+                <Grid item md={1} xs={12} className={classes.accountDiv} className="navAcoount">
                     <div className={`AccountDiv AccountDiv-${currentTheme}`}>
                     <Link to='/account' className={classes.accountBox}>
                         <img src={accountLogo} className="Account-logo" alt="account logo" />
