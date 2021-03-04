@@ -13,7 +13,6 @@ import FbPage from './FbPage';
 import InstaPage from './InstaPage';
 import Photo from './Photo';
 import Video from './Video';
-import Audio from './Audio';
 
 export default function Home(){
     return(
@@ -31,9 +30,6 @@ export default function Home(){
                 <Route path='/video'>
                     <Video />
                 </Route>
-                <Route path='/audio'>
-                    <Audio />
-                </Route>
                 <Route exact path='/press/post/:id'>
                     <Post />
                 </Route>
@@ -45,7 +41,6 @@ export default function Home(){
                 </Route>
                 <Route path='/'>
                     <MainPage />
-                    {/* <MainPress /> */}
                     <MainVideo />
                     <FbPage />
                     <InstaPage />

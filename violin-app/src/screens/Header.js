@@ -4,7 +4,7 @@ import accountLogo from '../photos/account-logo.svg';
 import '../css/header.css';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
+import { Button, Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ChangeTheme from '../ChangeTheme';
@@ -13,19 +13,20 @@ import ThemeContext from '../ThemeContext';
 import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles({
+    // AppHeader: {
+    //     zIndex: '100',
+    //     width: '100%',
+    //     top: '0',
+    //     left: '0',
+    //     maxWidth: '1366px',
+    //     backgroundColor: '#fff',
+    //     position: 'fixed'
+    // },
     headerDiv: {
         display: 'flex',
         height: '100%',
-        alignItems: 'center'
-    },
-    AppHeader: {
-        zIndex: '100',
-        width: '100%',
-        top: '0',
-        left: '0',
-        maxWidth: '1366px',
-        backgroundColor: '#fff',
-        position: 'fixed',
+        alignItems: 'center',
+        // position: 'fixed'
     },
     navHeader: {
         display: 'flex',
@@ -66,7 +67,8 @@ export default function Header(){
     const classes = useStyles();
 
     return(
-        <Container maxWidth="lg" className={classes.AppHeader} className={`headerBackground headerBackground-${currentTheme}`}>
+        <div className={`AppHeader AppHeader-${currentTheme}`}>
+        <Container maxWidth="lg">
         <Helmet>
             <title>TinaViolin-B</title>
         </Helmet>
@@ -90,10 +92,9 @@ export default function Header(){
                         <ul className={classes.navHeader}>
                         <div className="dropdown">
                             <button className={`dropbtn dropbtn-${currentTheme}`}>{t('media')}</button>
-                                <div className="dropdown-content">
+                                <div className={`dropdown-content dropdown-content-${currentTheme}`}>
                                 <Link className="dropdownLink" to='/photo'><li>{t('photo')}</li></Link>
                                 <Link className="dropdownLink" to='/video'><li>{t('videoNav')}</li></Link>
-                                <Link className="dropdownLink" to='/audio'><li>{t('audio')}</li></Link>
                             </div>
                         </div>
                         </ul>
@@ -112,7 +113,7 @@ export default function Header(){
                 </Grid>
                 <Grid item md={2} xs={2} className={classes.accountDiv}>
                     <div>
-                        {/* <Button
+                        <Button
                             variant="outlined"
                             size="small"
                             color="primary"
@@ -120,8 +121,8 @@ export default function Header(){
                             onClick={()=> changeLang('en')}
                         >
                             ENG
-                        </Button> */}
-                        {/* <Button
+                        </Button>
+                        <Button
                             variant="outlined"
                             size="small"
                             color="primary"
@@ -129,8 +130,8 @@ export default function Header(){
                             onClick={()=> changeLang('ka')}
                         >
                             ქარ
-                        </Button> */}
-                        <button
+                        </Button>
+                        {/* <button
                             className="langBtn"
                             onClick={()=> changeLang('en')}
                         >
@@ -141,11 +142,12 @@ export default function Header(){
                             onClick={()=> changeLang('ka')}
                         >
                             ქარ
-                        </button>
+                        </button> */}
                             <ChangeTheme />
                     </div>
                 </Grid>
             </Grid>
         </Container>
+        </div>
     )
 }

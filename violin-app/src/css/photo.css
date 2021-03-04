@@ -1,0 +1,8 @@
+.photoDiv{
+    background-color: #F9A7B0!important;
+    display: flex;
+    justify-content: center;
+}
+.photoDiv-dark{
+    background-color: #2C3539!important;
+}

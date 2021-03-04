@@ -23,6 +23,10 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin-top: 0;
 }
+.changePageBtn{
+    display: flex;
+    justify-content: center;
+}
 
 .searchInt{
     padding: 6px;

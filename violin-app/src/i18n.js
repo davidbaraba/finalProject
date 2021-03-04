@@ -12,7 +12,6 @@ const resources = {
       "media": "Media",
       "photo": "Photo",
       "videoNav": "Video",
-      "audio": "Audio",
       "contact": "Contact",
       "theme-mode": "Dark Mode",
       "account": "Account",
@@ -35,6 +34,7 @@ const resources = {
       "instagram": "Instagram",
       "twitter": "Twitter",
       "youtube": "YouTube",
+      "soundCloud": "SOUNDCLOUD",
       "follow_tina": "Follow me and recieve all news from Tina Violin B.",
       "labelName": "Your Full Name",
       "labelNumber": "Your Phone Number",
@@ -50,7 +50,7 @@ const resources = {
       // account
       // videoPage
       "video": "Videos |",
-      "visitYoutube": "Visit My YouTube Channnel",
+      "visitYoutube": "Visit To My YouTube Channnel",
       // videoPage
       // pressPage
       "pressPageTitle": "PRESS",
@@ -72,7 +72,6 @@ const resources = {
       "media": "მედია",
       "photo": "ფოტო",
       "videoNav": "ვიდეო",
-      "audio": "აუდიო",
       "contact": "კონტაქტი",
       "theme-mode": "ღამის რეჟიმი",
       "account": "ანგარიში",
@@ -95,6 +94,7 @@ const resources = {
       "instagram": "ინსტაგრამი",
       "twitter": "ტვიტერი",
       "youtube": "იუთუბი",
+      "soundCloud": "საუნდქლაუდი",
       "follow_tina": "გამომყევი სოციალურ ქსელებში და გაიგე ყველა სიახლე ჩემგან.",
       "labelName": "შენი სრული სახელი და გვარი",
       "labelNumber": "შენი ტელეფონის ნომერი",

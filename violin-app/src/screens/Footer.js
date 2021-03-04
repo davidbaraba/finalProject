@@ -27,11 +27,21 @@ export default function Footer(){
         <div>
             <Grid container className={`footerBox footerBox-${currentTheme}`}>
                 <Grid item md={4} xs={12} className={`footerLeftBoxes footerLeftBoxes-${currentTheme}`}>
-                    <p className="aaa">{t('rights')}</p>
+                    <div className="responsiveFooterLeftBoxes">
+                        <p>
+                            {t('rights')}
+                        </p>
+                    </div>
                 </Grid>
                 <Grid item md={4} xs={12} className="footerCenterBoxes center">
-                    <Link className="footerCenterFirstBox" to="#">{t('privacy')}</Link>
-                    <Link to="#">{t('terms')}</Link>
+                    <div className="responsiveFooterLeftBoxes">
+                        <Link className="footerCenterFirstBox" to="#">
+                            {t('privacy')}
+                        </Link>
+                        <Link to="#">
+                            {t('terms')}
+                        </Link>
+                    </div>
                 </Grid>
                 <Grid item md={4} xs={12} className="footerSocialBox">
                     <div>

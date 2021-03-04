@@ -39,7 +39,7 @@ const useStyles = makeStyles({
       }
 });
 
-const limit = 3;
+const limit = 6;
 
 export default function Press(){
 
@@ -118,43 +118,46 @@ export default function Press(){
             <h1 className="pressName">{t('pressPageTitle')}</h1>
             
             <Container maxWidth="lg" className={classes.PressMainContainer} style={{ backgroundImage: `url(${pressBackground})` }}>
-                <Grid container spacing={3} className={classes.PressBox}>
-                    <Grid item md={4} xs={12} className={classes.postBox}>
+                <Grid container spacing={3}>
                         {
                             posts.map((item) =>(
-                                <Card key={item.id} className={classes.root}>
-                                    <CardActionArea className={`postRootBox-${currentTheme}`}>
-                                        <CardMedia
-                                            component="img"
-                                            alt="concert photo"
-                                            height="250"
-                                            image={item.media}
-                                            title="Contemplative Reptile"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                {item.title}
-                                            </Typography>
-                                            <Typography variant="body2" color="textSecondary" component="p" className={`postRootBox-${currentTheme}`}>
-                                                {item.content.split(' ').splice(0, 30).join(' ') + '...'}
-                                            </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions className={`postRootBox-${currentTheme}`}>
-                                        <Button
-                                            className={`postRootBoxBtn postRootBoxBtn-${currentTheme}`}
-                                            size="small" 
-                                            color="primary"
-                                            component={Link}
-                                            to={'/press/post/' + item.id}
-                                        >
-                                            {t('readMoreBtn')}
-                                        </Button>
-                                    </CardActions>
-                                </Card>     
+                                <Grid key={item.id} item md={4} sm={6} xs={12} className={classes.postBox}>
+                                    <Card className={classes.root}>
+                                        <CardActionArea className={`postRootBox-${currentTheme}`}>
+                                            <CardMedia
+                                                component="img"
+                                                alt="concert photo"
+                                                height="250"
+                                                image={item.media}
+                                                title="Contemplative Reptile"
+                                            />
+                                            <CardContent>
+                                                <Typography gutterBottom variant="h5" component="h2">
+                                                    {item.title}
+                                                </Typography>
+                                                <Typography variant="body2" color="textSecondary" component="p" className={`postRootBox-${currentTheme}`}>
+                                                    {item.content.split(' ').splice(0, 30).join(' ') + '...'}
+                                                </Typography>
+                                            </CardContent>
+                                        </CardActionArea>
+                                        <CardActions className={`postRootBox-${currentTheme}`}>
+                                            <Button
+                                                className={`postRootBoxBtn postRootBoxBtn-${currentTheme}`}
+                                                size="small" 
+                                                color="primary"
+                                                component={Link}
+                                                to={'/press/post/' + item.id}
+                                            >
+                                                {t('readMoreBtn')}
+                                            </Button>
+                                        </CardActions>
+                                    </Card>   
+                                </Grid>  
                             ))
                         }
-                        <Button
+                </Grid>
+                <div className="changePageBtn">
+                    <Button
                             className={`postRootBoxBtn-${currentTheme}`}
                             variant="contained"
                             disabled={page <=1}
@@ -171,9 +174,8 @@ export default function Press(){
                             <Link to={'/press/' + (page + 1)} className={`postRootBoxBtn-${currentTheme}`}>
                                 {t('nextPage')}
                             </Link>
-                        </Button>
-                    </Grid>
-                </Grid>
+                    </Button>
+                </div>
             </Container>
         </div>
     )

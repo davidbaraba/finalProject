@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useTranslation } from 'react-i18next';
 import ThemeContext from "./ThemeContext";
 import { makeStyles } from '@material-ui/core/styles';
+import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles({
     ThemeBtn: {
@@ -26,12 +27,21 @@ export default function ChangeTheme(){
 
     return(
         <div className={classes.ThemeBtn}>
-            <button
+            <Button
+                variant="outlined"
+                size="small"
+                color="primary"
+                className='themeBtn'
+                onClick={changeTheme}
+            >
+                {t('theme-mode')}
+            </Button>
+            {/* <button
                 className="themeBtn"
                 onClick={changeTheme}
             >
                 {t('theme-mode')}
-            </button>
+            </button> */}
         </div>
     )
 }

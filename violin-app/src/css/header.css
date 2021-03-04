@@ -22,12 +22,12 @@
     align-items: center;
     border-radius: 20px;
   }
-  .headerBackground{
+  /* .headerBackground{
     background-color: white;
   }
   .headerBackground-dark{
     background-color: black;
-  }
+  } */
 
   .langBtn{
     background-color: white;
@@ -58,7 +58,7 @@
   font-weight: bold;
 }
 .dropbtn-dark{
-  background-color: black;
+  background-color: #242526;
 }
 
 .dropdown {
@@ -71,6 +71,9 @@
 
 .dropbtn:hover{
   color: #d3d3d3;
+}
+.dropdown-content-dark{
+  background-color: #242526!important;
 }
 .dropdown-content {
   display: none;
@@ -91,3 +94,33 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+.AppHeader-dark{
+  background-color: #242526!important;
+}
+.AppHeader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  max-width: 1366px;
+  background-color: #fff;
+}
+
+/* AppHeader: {
+     zIndex: '100',
+     width: '100%',
+     top: '0',
+     left: '0',
+     maxWidth: '1366px',
+     backgroundColor: '#fff',
+     position: 'fixed'
+ },
+ headerDiv: {
+     display: 'flex',
+     height: '100%',
+     alignItems: 'center',
+      position: 'fixed'
+  }, */

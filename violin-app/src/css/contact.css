@@ -21,8 +21,11 @@
     margin-left: 10%;
     margin-right: 10%;
 }
+.lastThreeIcon{
+    padding-left: 7px;
+}
 .contactField-dark{
-    background-color: #4F4F4F;
+    background-color: #242526;
 }
 .fieldBlock-dark{
     background-color: white;
@@ -40,7 +43,7 @@
     padding: 30px 5px 30px 5px;
 }
 .contactSocialText-dark{
-    background-color: #4F4F4F;
+    background-color: #242526;
     color: white;
 }
 .socialLink{

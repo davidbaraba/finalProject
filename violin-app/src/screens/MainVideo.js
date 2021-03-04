@@ -4,6 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
 import Iframe from 'react-iframe';
 import { useTranslation } from 'react-i18next';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 import violinBackground from '../photos/violinBackground.jpg';
 import youtubeLogo from '../photos/youtubeLogo.png';
@@ -15,11 +17,11 @@ const useStyles = makeStyles({
       box: {
         display: 'flex',
         justifyContent: 'flex-start',
-        alignItems: 'center'
+        alignItems: 'center',
       }
 });
 
-export default function Press(){
+export default function MainVideo(){
 
     const classes = useStyles();
     const {t} = useTranslation();
@@ -37,7 +39,7 @@ export default function Press(){
                 </a>
                 </h2>
             </Container>
-            <Grid container>
+            <Grid container className="IframeBox">
                 <Grid item md={12} xs={12}>
                 <div className="mainVideoFirst">
                     <Iframe 
@@ -64,7 +66,7 @@ export default function Press(){
                 <Grid item md={4} className="videoContentBlock">
                     <div className="mainVideoContent">
                         <Iframe 
-                            url="https://www.youtube.com/embed/pDLtWEW0InU"
+                            url="https://www.youtube.com/embed/8v1eNYk9uAI"
                             width="390px"
                             height="220px"
                             frameBorder="1px"
@@ -85,42 +87,12 @@ export default function Press(){
                         />
                     </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
-                    <div className="mainVideoContent">
-                        <Iframe 
-                            url="https://www.youtube.com/embed/8v1eNYk9uAI"
-                            width="390px"
-                            height="220px"
-                            frameBorder="1px"
-                            allow="fullscreen"
-                            className="iframeBox"
-                        />
-                    </div>
-                </Grid>
-                <Grid item md={4} className="videoContentBlock">
-                    <div className="mainVideoContent">
-                        <Iframe 
-                            url="https://www.youtube.com/embed/OJ0sZjKqh_8"
-                            width="390px"
-                            height="220px"
-                            frameBorder="1px"
-                            allow="fullscreen"
-                            className="iframeBox"
-                        />
-                    </div>
-                </Grid>
-                <Grid item md={4} className="videoContentBlock">
-                    <div className="mainVideoContent">
-                        <Iframe 
-                            url="https://www.youtube.com/embed/9AKNo9qoudY"
-                            width="390px"
-                            height="220px"
-                            frameBorder="1px"
-                            allow="fullscreen"
-                            className="iframeBox"
-                        />
-                    </div>
-                </Grid>
+                <div className="videoChangeBtn">
+                <Button variant="contained" color="secondary">
+                    <Link to='/video'>Sea More</Link>
+                </Button>
+                </div>
+                
             </Grid>
             
         </div>

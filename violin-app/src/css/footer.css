@@ -61,6 +61,8 @@
     font-size: 30px;
 }
 
-@media only screen and (min-width: 960px) {
-    
+@media only screen and (max-width: 960px) {
+    .responsiveFooterLeftBoxes{
+        margin: 10px 0;
+    }
   }

@@ -2,6 +2,7 @@ import facebookLogo from '../photos/facebookLogo.svg';
 import instagramLogo from '../photos/InstagramLogo.svg';
 import twitterLogo from '../photos/twitterLogo.svg';
 import YouTubeIcon from '../photos/YouTubeIcon.png';
+import soundCloud from '../photos/soundCloud.svg';
 import  contactBackgroundPhoto from '../photos/contactBackgroundPhoto.jpg';
 
 import Grid from '@material-ui/core/Grid';
@@ -100,16 +101,22 @@ export default function Contact(){
                                 <h5 className={`instaShareName instaShareName-${currentTheme}`}>{t('instagram')}</h5>
                             </a>
                         </div>
-                        <div className={`contactField contactField-${currentTheme}`}>
+                        <div className={`contactField lastThreeIcon contactField-${currentTheme}`}>
                             <a target="_blank" className="socialLink" href="#">
                                 <img className="tweeterShare" src={twitterLogo} />
                                 <h5 className={`tweeterShareName tweeterShareName-${currentTheme}`}>{t('twitter')}</h5>
                             </a>
                         </div>
-                        <div className={`contactField contactField-${currentTheme}`}>
+                        <div className={`contactField lastThreeIcon contactField-${currentTheme}`}>
                             <a target="_blank" className="socialLink" href="https://www.youtube.com/user/violinviolin777/videos">
                                 <img className="youTubeShare" src={YouTubeIcon} />
                                 <h5 className={`youTubeShareName youTubeShareName-${currentTheme}`}>{t('youtube')}</h5>
+                            </a>
+                        </div>
+                        <div className={`contactField lastThreeIcon contactField-${currentTheme}`}>
+                            <a target="_blank" className="socialLink" href="https://soundcloud.com/tinaviolin-b">
+                                <img className="youTubeShare" src={soundCloud} />
+                                <h5 className={`youTubeShareName youTubeShareName-${currentTheme}`}>{t('soundCloud')}</h5>
                             </a>
                         </div>
                         <div className={`contactSocialText contactSocialText-${currentTheme}`}>
