@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 40px;
     height: 250px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,12 +20,23 @@
     background-color: #f6f6f6;
     margin-left: 10%;
     margin-right: 10%;
+    padding-top: 10px;
 }
 .lastThreeIcon{
     padding-left: 7px;
 }
 .contactField-dark{
     background-color: #242526;
+}
+.fieldBlockArea-dark{
+    background-color: #242526!important;
+}
+.fieldBlockArea{
+    background-color: #f6f6f6;
+}
+.fieldBlock,
+.fieldBlockArea{
+    width: 100%;
 }
 .fieldBlock-dark{
     background-color: white;
@@ -40,7 +51,7 @@
     background-color: #f6f6f6;
     margin-left: 10%;
     margin-right: 10%;
-    padding: 30px 5px 30px 5px;
+    padding: 30px 15px 30px 5px;
 }
 .contactSocialText-dark{
     background-color: #242526;
@@ -85,4 +96,83 @@
 .mapBox-dark{
     background-color: #2C3539;
     border-top: .5px solid white;
+}
+
+@media only screen and (max-width: 960px) {
+    .contactField,
+    .contactSocialText{
+        justify-content: center;
+        display: flex;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .fieldBlock,
+    .fieldBlockArea{
+        margin-top: 10px!important;
+    }
+    .fieldBlockArea{
+        width: 210px!important;
+    }
+    .contactField{
+        width: 300px;
+        padding: 5px!important;
+    }
+    .formDiv,
+    .fieldBlockArea{
+        width: 300px!important;
+        display: flex;
+        justify-content: center;
+        margin: 0px!important;
+    }
+    .fieldBlockArea{
+        margin-top: 5px!important;
+    }
+    .lastThreeIcon {
+        padding-left: 0px;
+    }
+    .contactSocialText{
+        width: 290px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .fieldBlock,
+    .fieldBlockArea{
+        margin-top: 7px;
+    }
+    .contactField{
+        width: 200px;
+    }
+    .formDiv,
+    .fieldBlockArea{
+        width: 170px!important;
+    }
+    .contactSocialText{
+        width: 190px;
+    }
+}
+@media only screen and (max-width: 310px) {
+    .contactText{
+        font-size: 30px;
+    }
+    .fbShare,
+    .instaShare,
+    .youTubeShare,
+    .tweeterShare
+    {
+        width: 30px;
+        font-size: 10px;
+    }
+    .fbShareName,
+    .instaShareName,
+    .youTubeShareName,
+    .tweeterShareName
+    {
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 210px) {
+    .contactText{
+        font-size: 20px;
+    }
 }

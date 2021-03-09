@@ -21,7 +21,7 @@ function App() {
       <ThemeContext.Provider value={{currentTheme, setCurrentTheme}}>
         <Router>
           <div>
-            <header className={`App-header-${currentTheme}`}>
+            <header className={`App-header App-header-${currentTheme}`}>
               <Header />
             </header>
               <Home />

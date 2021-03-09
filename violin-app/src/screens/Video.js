@@ -1,10 +1,12 @@
 import '../css/mainVideo.css';
+import { Helmet } from 'react-helmet';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
 import Iframe from 'react-iframe';
 import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet';
+import { useContext } from 'react';
+import ThemeContext from '../ThemeContext';
 
 import violinBackground from '../photos/violinBackground.jpg';
 import youtubeLogo from '../photos/youtubeLogo.png';
@@ -23,6 +25,9 @@ const useStyles = makeStyles({
 export default function Video(){
 
     const classes = useStyles();
+
+    const {currentTheme} = useContext(ThemeContext);
+
     const {t} = useTranslation();
 
     return(
@@ -30,42 +35,42 @@ export default function Video(){
             <Helmet>
                 <title>TinaViolin-B/video</title>
             </Helmet>
-            <Container className={classes.box}>
-                <h1 className="mainVideoName">
+            <Container className={classes.box} className="responsiveVideoTitle">
+                <h1 className={`mainVideoName mainVideoName-${currentTheme}`}>
                     {t('video')}
                 </h1>
                 <h2 className="mainVideoNameLink">
-                <a className="youtubeLink" target="_blank" href="https://www.youtube.com/user/violinviolin777/videos">
-                    {t('visitYoutube')}
-                    <img className="youtubeIcon" src={youtubeLogo} />
-                </a>
+                    <a className={`youtubeLink youtubeLink-${currentTheme}`} target="_blank" href="https://www.youtube.com/user/violinviolin777/videos">
+                        {t('visitYoutube')}
+                        <img className={`youtubeIcon youtubeIcon-${currentTheme}`} src={youtubeLogo} />
+                    </a>
                 </h2>
             </Container>
             <Grid container>
-                <Grid item md={12} xs={12}>
-                <div className="mainVideoFirst">
-                    <Iframe 
-                        url="https://www.youtube.com/embed/HR-0idJO1Sg"
-                        width="550px"
-                        height="350px"
-                        frameBorder="1px"
-                        allow="fullscreen"
-                    />
-                </div>
+                <Grid item md={12} sm={12} xs={12}>
+                    <div className="mainVideoFirst">
+                        <Iframe 
+                            url="https://www.youtube.com/embed/HR-0idJO1Sg"
+                            width="550px"
+                            height="350px"
+                            frameBorder="1px"
+                            allow="fullscreen"
+                        />
+                    </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
-                    <div>
+                <Grid item md={4} sm={6} xs={12} className="videoContentBlock">
+                    <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/BUZs6Y2nU5A"
                             width="390px"
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
+                <Grid item md={4} sm={6} xs={12} className="videoContentBlock">
                     <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/pDLtWEW0InU"
@@ -73,11 +78,11 @@ export default function Video(){
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
+                <Grid item md={4} sm={6} xs={12} className="videoContentBlock">
                     <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/3NLYmv8mpYo"
@@ -85,11 +90,11 @@ export default function Video(){
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
+                <Grid item md={4} sm={6} xs={12} className="videoContentBlock">
                     <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/8v1eNYk9uAI"
@@ -97,11 +102,11 @@ export default function Video(){
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
+                <Grid item md={4} sm={6} xs={12} className="videoContentBlock">
                     <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/OJ0sZjKqh_8"
@@ -109,11 +114,11 @@ export default function Video(){
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
+                <Grid item md={4} sm={6} xs={12} className="videoContentBlock">
                     <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/9AKNo9qoudY"
@@ -121,11 +126,11 @@ export default function Video(){
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
+                <Grid item md={4} sm={6} xs={12} className="videoContentBlock">
                     <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/hGrOEC5FgBM"
@@ -133,11 +138,11 @@ export default function Video(){
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
+                <Grid item md={4} sm={6} xs={12} className="videoContentBlock">
                     <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/BJaWP4adr7s"
@@ -145,11 +150,11 @@ export default function Video(){
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
+                <Grid item md={4} sm={6} xs={12} className="videoContentBlock">
                     <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/OTxC_hPQD6A"
@@ -157,11 +162,11 @@ export default function Video(){
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
+                <Grid item md={4} sm={6} xs={12} className="videoContentBlock">
                     <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/wmzM-XTuERI"
@@ -169,11 +174,11 @@ export default function Video(){
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
+                <Grid item md={4} sm={6} xs={12} className="videoContentBlock">
                     <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/8hqM9q0vWow"
@@ -181,11 +186,11 @@ export default function Video(){
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
+                <Grid item md={4} sm={6} xs={12} className="videoContentBlock">
                     <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/4Cqnfa8E7fI"
@@ -193,12 +198,11 @@ export default function Video(){
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
             </Grid>
-            
         </div>
     )
 }

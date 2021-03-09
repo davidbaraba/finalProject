@@ -1,4 +1,5 @@
 import '../css/press.css';
+import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,13 +13,11 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import SearchIcon from '@material-ui/icons/Search';
-
 import { useContext, useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
-
-import pressBackground from '../photos/pressBackground.jpg';
 import ThemeContext from '../ThemeContext';
 import { useTranslation } from 'react-i18next';
+
+import pressBackground from '../photos/pressBackground.jpg';
 
 const useStyles = makeStyles({
     root: {
@@ -34,7 +33,7 @@ const useStyles = makeStyles({
       search: {
           display: 'flex',
           justifyContent: 'flex-End',
-          marginTop: '5px',
+          marginTop: '25px',
           marginRight: '5px',
       }
 });
@@ -42,6 +41,8 @@ const useStyles = makeStyles({
 const limit = 6;
 
 export default function Press(){
+
+    const classes = useStyles();
 
     const {t} = useTranslation();
 
@@ -54,8 +55,6 @@ export default function Press(){
     let page = params.page || 1;
     page = parseInt(page);
 
-    const classes = useStyles();
-
     const[posts, setPost] = useState([]);
 
     const [search, setSearch] = useState('');
@@ -63,7 +62,6 @@ export default function Press(){
     const location = useLocation();
     const locationParams = new URLSearchParams(location.search);
     const q = locationParams.get('search');
-    const [loading, setLoading] = useState(true);
 
 
     useEffect(()=>{
@@ -77,7 +75,6 @@ export default function Press(){
         .then((response) => {
             setPost(response.data);
             setTotalPosts(response.headers['x-total-count']);
-            // setLoading(false);
         })
     }, [page, q]);
 
@@ -88,13 +85,8 @@ export default function Press(){
         history.push('/press?search=' + search)
     }
 
-    // if(posts.length === 0 && q && !loading){
-    //     return <div>პოსტები ვერ მოიძებნა</div>
-    // }
-
     return(
         <div className={`pressContainer pressContainer-${currentTheme}`}>
-
             <Helmet>
                 <title>TinaViolin-B/press</title>
             </Helmet>
@@ -106,7 +98,7 @@ export default function Press(){
                         onChange={(e) => setSearch(e.target.value)}
                         value={search}
                     />
-                    <button type="submit">
+                    <button type="submit" className="responsiveSearchBtn">
                         <SearchIcon
                             className="searchBtn"
                             className="fbIcon"
@@ -115,14 +107,16 @@ export default function Press(){
                     </button>
                 </form>
 
-            <h1 className="pressName">{t('pressPageTitle')}</h1>
+            <h1 className="pressName">
+                {t('pressPageTitle')}
+            </h1>
             
-            <Container maxWidth="lg" className={classes.PressMainContainer} style={{ backgroundImage: `url(${pressBackground})` }}>
+            <Container maxWidth="lg" className={classes.PressMainContainer} style={{ backgroundImage: `url(${pressBackground})`}}>
                 <Grid container spacing={3}>
                         {
                             posts.map((item) =>(
                                 <Grid key={item.id} item md={4} sm={6} xs={12} className={classes.postBox}>
-                                    <Card className={classes.root}>
+                                    <Card className={classes.root} className="responsiveBox">
                                         <CardActionArea className={`postRootBox-${currentTheme}`}>
                                             <CardMedia
                                                 component="img"
@@ -158,22 +152,22 @@ export default function Press(){
                 </Grid>
                 <div className="changePageBtn">
                     <Button
-                            className={`postRootBoxBtn-${currentTheme}`}
-                            variant="contained"
-                            disabled={page <=1}
-                        >
-                            <Link to={'/press/' + (page - 1)} className={`postRootBoxBtn-${currentTheme}`}>
-                                {t('prevPage')}
-                            </Link>
-                        </Button>
-                        <Button
-                            className={`postRootBoxBtn-${currentTheme}`}
-                            variant="contained"
-                            disabled={page >= totalPage}
-                        >
-                            <Link to={'/press/' + (page + 1)} className={`postRootBoxBtn-${currentTheme}`}>
-                                {t('nextPage')}
-                            </Link>
+                        className={`postRootBoxBtn postRootBoxBtn-${currentTheme}`}
+                        variant="contained"
+                        disabled={page <=1}
+                    >
+                        <Link to={'/press/' + (page - 1)} className={`postRootBoxBtn-${currentTheme}`}>
+                            {t('prevPage')}
+                        </Link>
+                    </Button>
+                    <Button
+                        className={`postRootBoxBtn-${currentTheme}`}
+                        variant="contained"
+                        disabled={page >= totalPage}
+                    >
+                        <Link to={'/press/' + (page + 1)} className={`postRootBoxBtn-${currentTheme}`}>
+                            {t('nextPage')}
+                        </Link>
                     </Button>
                 </div>
             </Container>

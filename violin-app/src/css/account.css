@@ -12,19 +12,25 @@
     opacity: .8;
     border-top: 1px solid brown;
 }
+.accountName-dark{
+    color: black!important;
+}
 .accountName{
     margin: 0;
     font-size: 50px;
     color: brown;
     padding-bottom: 10px;
 }
+.loginBtn-dark{
+    background-color: black!important;
+}
 .loginBtn{
     background-color: brown;
 }
 
-p{
+/* p{
     margin: 0;
-}
+} */
 
 .accountForm{
     border: 3px solid brown;
@@ -36,5 +42,5 @@ p{
 }
 .accountForm-dark{
     background-color: #FFDFDD;
-    border: 6px solid palevioletred;
+    border: 6px solid black;
 }

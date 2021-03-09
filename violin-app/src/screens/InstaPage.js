@@ -25,7 +25,7 @@ export default function FbPage(){
                 <h2 className="instaName">Instagram</h2>
             </div>
             <Grid container >
-                <Grid item md={4} xs={12} className="instaPostBox">
+                <Grid item md={4} sm={12} className="instaPostBox">
                 <div className="instaimgWrap">
                     <img className="instaimgImg" src={instaPostImg1}/>
                     <a target="_blank" href="https://www.instagram.com/p/B60imoPp1oL/">
@@ -33,15 +33,7 @@ export default function FbPage(){
                     </a>
                 </div>
                 </Grid>
-                <Grid item md={4} xs={12} className="instaPostBox">
-                <div className="instaimgWrap">
-                    <img className="instaimgImg" src={instaPostImg2}/>
-                    <a target="_blank" href="https://www.instagram.com/p/B2zPEvigg1U/">
-                        <p className="instaimgDescription">#electricviolinist #violin #eventday #dj #producer </p>
-                    </a>
-                </div>
-                </Grid>
-                <Grid item md={4} xs={12} className="instaPostBox">
+                <Grid item md={4} sm={12} className="instaPostBox">
                 <div className="instaimgWrap">
                     <img className="instaimgImg" src={instaPostImg3}/>
                     <a target="_blank" href="https://www.instagram.com/p/B23v4A-gDcc/">
@@ -49,7 +41,15 @@ export default function FbPage(){
                     </a>
                 </div>
                 </Grid>
-                <Grid item md={4} xs={12} className="instaPostBox">
+                <Grid item md={4} sm={12} className="instaPostBox">
+                <div className="instaimgWrap">
+                    <img className="instaimgImg" src={instaPostImg2}/>
+                    <a target="_blank" href="https://www.instagram.com/p/B2zPEvigg1U/">
+                        <p className="instaimgDescription">#electricviolinist #violin #eventday #dj #producer </p>
+                    </a>
+                </div>
+                </Grid>
+                <Grid item md={4} sm={12} className="instaPostBox">
                 <div className="instaimgWrap">
                     <img className="instaimgImg" src={instaPostImg4}/>
                     <a target="_blank" href="https://www.instagram.com/p/B81SkDXpRhD/">
@@ -57,15 +57,15 @@ export default function FbPage(){
                     </a>
                 </div>
                 </Grid>
-                <Grid item md={4} xs={12} className="instaPostBox">
-                <div className="instaimgWrap">
+                <Grid item md={4} sm={12} className="instaPostBox">
+                <div className="instaimgWrap instaimgWrapExc">
                     <img className="instaimgImg" src={instaPostImg5}/>
                     <a target="_blank" href="https://www.instagram.com/p/CCyywZPHpE_/">
                         <p className="instaimgDescription">Some romantic video is coming 🎻🎥🔥</p>
                     </a>
                 </div>
                 </Grid>
-                <Grid item md={4} xs={12} className="instaPostBox">
+                <Grid item md={4} sm={12} className="instaPostBox">
                 <div className="instaimgWrap">
                     <img className="instaimgImg" src={instaPostImg6}/>
                     <a target="_blank" href="https://www.instagram.com/p/CIveGQbnfvs/">

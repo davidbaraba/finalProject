@@ -27,7 +27,7 @@ export default function ChangeTheme(){
 
     return(
         <div className={classes.ThemeBtn}>
-            <Button
+            {/* <Button
                 variant="outlined"
                 size="small"
                 color="primary"
@@ -35,13 +35,13 @@ export default function ChangeTheme(){
                 onClick={changeTheme}
             >
                 {t('theme-mode')}
-            </Button>
-            {/* <button
+            </Button> */}
+            <button
                 className="themeBtn"
                 onClick={changeTheme}
             >
                 {t('theme-mode')}
-            </button> */}
+            </button>
         </div>
     )
 }

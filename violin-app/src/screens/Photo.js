@@ -1,10 +1,10 @@
+import '../css/photo.css';
+import { Helmet } from 'react-helmet';
 import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-
-import { Helmet } from 'react-helmet';
-import '../css/photo.css';
+import ThemeContext from '../ThemeContext';
 
 import photo1 from '../photos/photo1.jpg';
 import photo2 from '../photos/photo2.jpg';
@@ -32,19 +32,17 @@ import photo23 from '../photos/photo23.jpg';
 import photo24 from '../photos/photo24.jpg';
 import photo25 from '../photos/photo25.jpg';
 import photo26 from '../photos/photo26.jpg';
-import ThemeContext from '../ThemeContext';
 
 const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent: 'space-around',
-      overflow: 'hidden',
-    //   backgroundColor: theme.palette.background.paper,
+      overflow: 'hidden'
     },
     gridList: {
-      width: 1000,
-      height: 460,
+      width: '100%',
+      height: '100%',
     },
   }));
 
@@ -222,13 +220,12 @@ export default function Photo(){
             <div className={classes.root} className={`photoDiv photoDiv-${currentTheme}`}>
                 <GridList cellHeight={400} className={classes.gridList} cols={5}>
                     {mediaData.map((tile) => (
-                    <GridListTile key={tile.img} cols={tile.cols || 1}>
-                        <img src={tile.img} alt={tile.title} />
-                    </GridListTile>
+                        <GridListTile key={tile.img} cols={tile.cols || 1}>
+                            <img src={tile.img} alt={tile.title} />
+                        </GridListTile>
                     ))}
                 </GridList>
             </div>
-
         </div>
     )
 }

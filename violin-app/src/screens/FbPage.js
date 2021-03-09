@@ -19,7 +19,7 @@ export default function FbPage(){
                 <h2 className="fbName">Facebook</h2>
             </div>
             <Grid container >
-                <Grid item md={4} xs={12} className="fbPostBox">
+                <Grid item md={4} sm={12} className="fbPostBox">
                 <div className="imgWrap">
                     <img className="imgImg" src={fbPostImg1}/>
                     <a target="_blank" href="https://www.facebook.com/TikoBarabadzeViolinist/posts/2198555870203993">
@@ -27,7 +27,7 @@ export default function FbPage(){
                     </a>
                 </div>
                 </Grid>
-                <Grid item md={4} xs={12} className="fbPostBox">
+                <Grid item md={4} sm={12} className="fbPostBox">
                 <div className="imgWrap">
                     <img className="imgImg" src={fbPostImg2}/>
                     <a target="_blank" href="https://www.facebook.com/TikoBarabadzeViolinist/posts/3512617568797810">
@@ -35,15 +35,15 @@ export default function FbPage(){
                     </a>
                 </div>
                 </Grid>
-                <Grid item md={4} xs={12} className="fbPostBox">
+                <Grid item md={4} sm={12} className="fbPostBox">
                 <div className="imgWrap">
-                    <img className="imgImg" src={fbPostImg3}/>
-                    <a target="_blank" href="https://www.facebook.com/TikoBarabadzeViolinist/posts/3768725966520301">
-                        <p className="imgDescription">ძალიან მაგარი ამბავი 🥰🥰👊🏻❤️❤️ შინდისი HBO- ზე 😱🥰🥰❤️❤️ საამაყო გუნდი Postred და მიხარია,რომ  დიდი პატივი მხვდა წილად მუსიკალურად გამეხმოვანებინა 🎻❤️🙏🏼 Zviad Mgebry მადლობა შენ  🙏🏼❤️</p>
+                    <img className="imgImg" src={fbPostImg6}/>
+                    <a target="_blank" href="https://www.facebook.com/TikoBarabadzeViolinist/posts/3548357038557196">
+                        <p className="imgDescription">სტუმრად რადიო იმედში  🥰❤️🥰❤️. ვარ ემოციებით სავსე, რადგან ძალიან საინტერესო გადაცემა გამოვიდა. ვისაუბრე განხორციელებულ კონცერტებზე,საავტორო მუსიკაზე,საერთო პროექტებსა და მომავალ გეგმებზე 💥🙈❤️🎻</p>
                     </a>
                 </div>
                 </Grid>
-                <Grid item md={4} xs={12} className="fbPostBox">
+                <Grid item md={4} sm={12} className="fbPostBox">
                 <div className="imgWrap">
                     <img className="imgImg" src={fbPostImg4}/>
                     <a target="_blank" href="https://www.facebook.com/TikoBarabadzeViolinist/posts/3746501088742789">
@@ -51,7 +51,7 @@ export default function FbPage(){
                     </a>
                 </div>
                 </Grid>
-                <Grid item md={4} xs={12} className="fbPostBox">
+                <Grid item md={4} sm={12} className="fbPostBox">
                 <div className="imgWrap">
                     <img className="imgImg" src={fbPostImg5}/>
                     <a target="_blank" href="https://www.facebook.com/photo?fbid=3734451703281061&set=a.502766483116282">
@@ -59,11 +59,11 @@ export default function FbPage(){
                     </a>
                 </div>
                 </Grid>
-                <Grid item md={4} xs={12} className="fbPostBox">
+                <Grid item md={4} sm={12} className="fbPostBox">
                 <div className="imgWrap">
-                    <img className="imgImg" src={fbPostImg6}/>
-                    <a target="_blank" href="https://www.facebook.com/TikoBarabadzeViolinist/posts/3548357038557196">
-                        <p className="imgDescription">სტუმრად რადიო იმედში  🥰❤️🥰❤️. ვარ ემოციებით სავსე, რადგან ძალიან საინტერესო გადაცემა გამოვიდა. ვისაუბრე განხორციელებულ კონცერტებზე,საავტორო მუსიკაზე,საერთო პროექტებსა და მომავალ გეგმებზე 💥🙈❤️🎻</p>
+                    <img className="imgImg" src={fbPostImg3}/>
+                    <a target="_blank" href="https://www.facebook.com/TikoBarabadzeViolinist/posts/3768725966520301">
+                        <p className="imgDescription">ძალიან მაგარი ამბავი 🥰🥰👊🏻❤️❤️ შინდისი HBO- ზე 😱🥰🥰❤️❤️ საამაყო გუნდი Postred და მიხარია,რომ  დიდი პატივი მხვდა წილად მუსიკალურად გამეხმოვანებინა 🎻❤️🙏🏼 Zviad Mgebry მადლობა შენ  🙏🏼❤️</p>
                     </a>
                 </div>
                 </Grid>

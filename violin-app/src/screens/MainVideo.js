@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom';
 
 import violinBackground from '../photos/violinBackground.jpg';
 import youtubeLogo from '../photos/youtubeLogo.png';
+import { useContext } from 'react';
+import ThemeContext from '../ThemeContext';
 
 const useStyles = makeStyles({
     root: {
@@ -23,12 +25,14 @@ const useStyles = makeStyles({
 
 export default function MainVideo(){
 
+    const {currentTheme} = useContext(ThemeContext);
+
     const classes = useStyles();
     const {t} = useTranslation();
 
     return(
         <div className="mainVideoBox" style={{ backgroundImage: `url(${violinBackground})` }}>
-            <Container className={classes.box}>
+            <Container className={classes.box} className="responsiveVideoTitle">
                 <h1 className="mainVideoName">
                     {t('video')}
                 </h1>
@@ -40,7 +44,7 @@ export default function MainVideo(){
                 </h2>
             </Container>
             <Grid container className="IframeBox">
-                <Grid item md={12} xs={12}>
+                <Grid item md={12} sm={12} xs={12}>
                 <div className="mainVideoFirst">
                     <Iframe 
                         url="https://www.youtube.com/embed/HR-0idJO1Sg"
@@ -51,46 +55,46 @@ export default function MainVideo(){
                     />
                 </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
-                    <div>
+                <Grid item md={4} sm={12} className="videoContentBlock">
+                    <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/BUZs6Y2nU5A"
-                            width="390px"
+                            width="350px"
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
+                <Grid item md={4} sm={12} className="videoContentBlock">
                     <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/8v1eNYk9uAI"
-                            width="390px"
+                            width="350px"
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
-                <Grid item md={4} className="videoContentBlock">
+                <Grid item md={4} sm={12} className="videoContentBlock">
                     <div className="mainVideoContent">
                         <Iframe 
                             url="https://www.youtube.com/embed/3NLYmv8mpYo"
-                            width="390px"
+                            width="350px"
                             height="220px"
                             frameBorder="1px"
                             allow="fullscreen"
-                            className="iframeBox"
+                            className={`iframeBox iframeBox-${currentTheme}`}
                         />
                     </div>
                 </Grid>
                 <div className="videoChangeBtn">
-                <Button variant="contained" color="secondary">
-                    <Link to='/video'>Sea More</Link>
-                </Button>
+                    <Button variant="contained" color="secondary" className={`videoChangeBtnDark-${currentTheme}`}>
+                        <Link to='/video'>Sea More</Link>
+                    </Button>
                 </div>
                 
             </Grid>

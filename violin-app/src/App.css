@@ -1,5 +1,10 @@
 a{
   text-decoration: none;
+  color: #6a0dad!important;
+  transition: all .5s;
+}
+a:hover{
+  color: #E42217!important;
 }
 
 .App-header-light{
@@ -10,12 +15,24 @@ a{
 }
 
 .themeBtn{
-    background-color: white;
+    background-color: rosybrown;
     color: purple;
-    border: 2px solid skyblue;
+    border: 1px solid #6a0dad;
     border-radius: 8px;
 }
 
 body{
   margin-top: 100px;
+}
+
+
+@media only screen and (max-width: 640px) {
+  .themeBtn{
+    font-size: 11px;
+    border-radius: 7px;
+  }
+  /* body{
+    background-color: #242526;
+  } */
+  
 }

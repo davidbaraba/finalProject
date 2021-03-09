@@ -48,15 +48,69 @@
     visibility: hidden;
     opacity: 0;
     transition: opacity .2s, visibility .2s;
-    width: 350px;
-    height: 445px;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: justify;
     text-indent: 15px;
+    margin-top: 0px;
 }
 .imgWrap:hover .imgDescription {
     visibility: visible;
     opacity: .8;
+}
+
+@media only screen and (max-width: 1200px) {
+    .imgWrap{
+        width: 80%;
+    }
+    .imgImg{
+        width: 80%;
+    }
+    .imgDescription{
+        width: 80%;
+        left: 40%;
+    }
+}
+@media only screen and (max-width: 960px) {
+    .fbName{
+        font-size: 70px;
+    }
+    .fbPostBox{
+        padding-bottom: 15px;
+    }
+    /* .imgWrap{
+        width: 100%;
+    }
+    .imgImg{
+        width: 100%;
+    }
+    .imgDescription{
+        width: 100%;
+        left: 50%;
+    } */
+}
+@media only screen and (max-width: 600px) {
+    .fbPostBox{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .imgDescription{
+        width: 300px;
+        height: 380px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .fbName{
+        font-size: 50px;
+    }
+    .imgImg{
+        width: 300px;
+    }
 }

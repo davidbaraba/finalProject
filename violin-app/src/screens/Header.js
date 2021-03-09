@@ -8,7 +8,7 @@ import { Button, Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ChangeTheme from '../ChangeTheme';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import ThemeContext from '../ThemeContext';
 import { Helmet } from 'react-helmet';
 
@@ -59,12 +59,28 @@ export default function Header(){
     const {t, i18n} = useTranslation();
 
     function changeLang(lang){
-        i18n.changeLanguage(lang)
+        i18n.changeLanguage(lang);
     }
 
     const {currentTheme} = useContext(ThemeContext);
 
     const classes = useStyles();
+
+    function classAdd(){
+        let element = document.getElementById('burger');
+        if(element.classList.contains('active')){
+           element.classList.remove('active') 
+        }else{
+            element.classList.add('active')
+        }
+
+        let navElement = document.getElementById('navList');
+        if(navElement.classList.contains('active')){
+            navElement.classList.remove('active') 
+        }else{
+            navElement.classList.add('active')
+        }
+    }
 
     return(
         <div className={`AppHeader AppHeader-${currentTheme}`}>
@@ -73,13 +89,13 @@ export default function Header(){
             <title>TinaViolin-B</title>
         </Helmet>
             <Grid container spacing={3} className={classes.headerDiv}>
-                <Grid item md={1} xs={12}>
+                <Grid item md={1} sm={1} xs={2}>
                     <Link to='/Home'>
                         <img src={violinLogo} className={`App-logo App-logo-${currentTheme}`} alt="logo" />
                     </Link>
                 </Grid>
-                <Grid item md={8} xs={12} className="navList">
-                    <nav className={classes.navHeader}>
+                <Grid item md={8} className={`navList navList-${currentTheme}`} id="navList">
+                    <nav className={classes.navHeader} className="nav">
                         <ul className={classes.navHeader}>
                             <Link className={classes.listItem} to='/bio'><li>{t('bio')}</li></Link>
                         </ul>
@@ -103,17 +119,23 @@ export default function Header(){
                         </ul>
                     </nav>
                 </Grid>
-                <Grid item md={1} xs={12} className={classes.accountDiv} className="navAcoount">
+                <Grid item md={1} sm={9} xs={7} className={classes.accountDiv} className="navAcoount">
+                <div className="burger" id="burger" onClick={classAdd}>
+                        <div className="divider"></div>
+                        <div className="divider"></div>
+                        <div className="divider"></div>
+                    </div>
                     <div className={`AccountDiv AccountDiv-${currentTheme}`}>
-                    <Link to='/account' className={classes.accountBox}>
-                        <img src={accountLogo} className="Account-logo" alt="account logo" />
-                        <p className={classes.accountLogoName}>{t('account')}</p>
-                    </Link>
+                        <Link to='/account' className={classes.accountBox}>
+                            <img src={accountLogo} className="Account-logo" alt="account logo" />
+                            <p className={classes.accountLogoName}>{t('account')}</p>
+                        </Link>
                     </div>
                 </Grid>
-                <Grid item md={2} xs={2} className={classes.accountDiv}>
-                    <div>
-                        <Button
+                <Grid item md={2} sm={2} xs={3} className={classes.accountDiv}>
+                    
+                    <div className="buttonDiv">
+                        {/* <Button
                             variant="outlined"
                             size="small"
                             color="primary"
@@ -126,12 +148,14 @@ export default function Header(){
                             variant="outlined"
                             size="small"
                             color="primary"
-                            className='langBtn'
+                            // style={ language=="ka" ? {color: "#C8CACC"} : {}}
+                            // className='langBtn'
                             onClick={()=> changeLang('ka')}
                         >
                             ქარ
-                        </Button>
-                        {/* <button
+                        </Button> */}
+                        <div className="languageBtn">
+                        <button
                             className="langBtn"
                             onClick={()=> changeLang('en')}
                         >
@@ -142,7 +166,8 @@ export default function Header(){
                             onClick={()=> changeLang('ka')}
                         >
                             ქარ
-                        </button> */}
+                        </button>
+                        </div>
                             <ChangeTheme />
                     </div>
                 </Grid>

@@ -27,18 +27,19 @@ export default function Post(){
     
     return(
         <div className={`postMainDiv postMainDiv-${currentTheme}`}>
-            <h1 className={`postTitle postTitle-${currentTheme}`}>{posts.title}</h1>
+            <h1 className={`postTitle postTitle-${currentTheme}`}>
+                {posts.title}
+            </h1>
             <img className="postImg" src={posts.media} alt="logo" />
             <h3>
                 <a target="_blank" className="postLink" href={posts.fbPost}>
-                <FacebookIcon
-                    className="pressFbIcon"
-                    style={{ fontSize: 50 }}
-                />
-                <p className="pressFbLink">
-                    {t('redirectfbArticle')}
-                </p>
-                
+                    <FacebookIcon
+                        className="pressFbIcon"
+                        style={{ fontSize: 50 }}
+                    />
+                    <p className="pressFbLink">
+                        {t('redirectfbArticle')}
+                    </p>
                 </a>
             </h3>
             <div className={`postTextCom postTextCom-${currentTheme}`}>

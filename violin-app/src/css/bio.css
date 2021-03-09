@@ -22,20 +22,8 @@
     stroke: aliceblue;
 }
 
-@media (max-width: 960px) {
-    .bioImage{
-        width: 100%;
-        width: 430px;
-    }
-    .bioImageGrid{
-        width: 100%;
-    }
-    .bioPhoto{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-    .bioText{
-        padding-bottom: 1000px;
+@media (max-width: 360px) {
+    .responsiveBiograhpyName{
+        font-size: 30px!important;
     }
 }
