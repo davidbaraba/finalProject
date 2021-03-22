@@ -28,7 +28,7 @@ export default function Footer(){
             <Grid container className={`footerBox footerBox-${currentTheme}`}>
                 <Grid item md={4} xs={12} className={`footerLeftBoxes footerLeftBoxes-${currentTheme}`}>
                     <div className="responsiveFooterLeftBoxes">
-                        <p>
+                        <p className="leftBox">
                             {t('rights')}
                         </p>
                     </div>
@@ -48,7 +48,9 @@ export default function Footer(){
                         <div className={`footerLogoBox footerLogoBox-${currentTheme}`}>
                             <img className="footerLogo" src={violinLogo} />
                         </div>
-                            <p className={`socialName socialName-${currentTheme}`}>{t('contact')}</p>
+                            <p className={`socialName socialName-${currentTheme}`}>
+                                {t('contact')}
+                            </p>
                         
                         <div className="footerSocialDiv">
                             <div>
@@ -67,7 +69,6 @@ export default function Footer(){
                                 </a>
                             </div>
                         </div>
-                        
                     </div>
                 </Grid>
             </Grid>

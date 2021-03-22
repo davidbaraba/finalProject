@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import '../css/post.css';
 import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
@@ -26,39 +27,45 @@ export default function Post(){
     }, [])
     
     return(
-        <div className={`postMainDiv postMainDiv-${currentTheme}`}>
-            <h1 className={`postTitle postTitle-${currentTheme}`}>
-                {posts.title}
-            </h1>
-            <img className="postImg" src={posts.media} alt="logo" />
-            <h3>
-                <a target="_blank" className="postLink" href={posts.fbPost}>
-                    <FacebookIcon
-                        className="pressFbIcon"
-                        style={{ fontSize: 50 }}
-                    />
-                    <p className="pressFbLink">
-                        {t('redirectfbArticle')}
-                    </p>
-                </a>
-            </h3>
-            <div className={`postTextCom postTextCom-${currentTheme}`}>
-                <p className={`postText postText-${currentTheme}`}>{posts.content}</p>
-                <div className="addCommentDiv">
-                    <input 
-                        placeholder={t('writeComment')}
-                        type="text"
-                        className="addCommentInp"
-                    />
-                    <button className={`addCommentBtn addCommentBtn-${currentTheme}`}>
-                        <AddCircleIcon
-                            className="fbIcon"
-                            style={{ fontSize: 40 }}
+        <>
+            <Helmet>
+                <title>{t('helmetPressPost')}{params.id}</title>
+            </Helmet>
+            <div className={`headerBottom headerBottom-${currentTheme}`}></div>
+            <div className={`postMainDiv postMainDiv-${currentTheme}`}>
+                <h1 className={`postTitle postTitle-${currentTheme}`}>
+                    {posts.title}
+                </h1>
+                <img className="postImg" src={posts.media} alt="logo" />
+                <h3>
+                    <a target="_blank" className="postLink" href={posts.fbPost}>
+                        <FacebookIcon
+                            className="pressFbIcon"
+                            style={{ fontSize: 50 }}
                         />
-                    </button>
+                        <p className="pressFbLink">
+                            {t('redirectfbArticle')}
+                        </p>
+                    </a>
+                </h3>
+                <div className={`postTextCom postTextCom-${currentTheme}`}>
+                    <p className={`postText postText-${currentTheme}`}>{posts.content}</p>
+                    <div className="addCommentDiv">
+                        <input 
+                            placeholder={t('writeComment')}
+                            type="text"
+                            className="addCommentInp"
+                        />
+                        <button className={`addCommentBtn addCommentBtn-${currentTheme}`}>
+                            <AddCircleIcon
+                                className="fbIcon"
+                                style={{ fontSize: 40 }}
+                            />
+                        </button>
+                    </div>
+                    <Comments postId={params.id} />
                 </div>
-                <Comments postId={params.id} />
             </div>
-        </div>
+        </>
     )
 }

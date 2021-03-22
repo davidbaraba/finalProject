@@ -24,99 +24,61 @@ export default function Login(){
     const { t } = useTranslation();
     const {currentTheme} = useContext(ThemeContext);
 
-    // const {setCurrentUser} = useContext(UserContext);
-    // const [username,setUsername] = useState('');
-    // const [password,setPassword] = useState('');
-
     function onsubmit(){
-        // if( username === 'a' && password === 'b'){
-        //     setCurrentUser({
-        //         username: 'a',
-        //         name: 'dato'
-        //     });
-        // }else{
-        //     alert('Wrong Username or Password')
-        // }
+        //
     }
 
-    // function changeLang(lang){
-    //     i18n.changeLanguage(lang);
-    // }
-
     return (
-        <div className="accountDiv" style={{ backgroundImage: `url(${violinBackground})` }}>
-            <Helmet>
-                <title>TinaViolin-B/account</title>
-            </Helmet>
-            <form className={`accountForm accountForm-${currentTheme}`} action="" onSubmit={onsubmit}>
-                <h2 className={`accountName accountName-${currentTheme}`}>
-                    {t('login')}
-                </h2>
-                <TextField
-                    autoFocus
-                    className={classes.margin}
-                    id="Username"
-                    label={t('username')}
-                    InputProps={{
-                        startAdornment: (
-                            <InputAdornment 
-                                position="start">
-                                <AccountCircle />
-                            </InputAdornment>
-                        ),
-                    }}
-                />
-                <TextField
-                    className={classes.margin}
-                    type='password'
-                    name="password"
-                    type='text'
-                    id="Password"
-                    label={t('password')}
-                    InputProps={{
-                        startAdornment: (
-                            <InputAdornment 
-                                position="start">
-                                <AccountCircle />
-                            </InputAdornment>
-                        ),
-                    }}
-                />
-                <Button
-                    className={`loginBtn loginBtn-${currentTheme}`}
-                    type='submit' 
-                    variant="contained" 
-                    color="primary"
-                >
-                    {t('loginBtn')}
-                </Button>
-            </form>
-
-
-            {/* <form className="accountForm" action="" onSubmit={onsubmit}>
-                <h3 className="accountName">LOGIN</h3>
-                <p>
-                    <input
-                        type='text'
-                        placeholder='Username'
-                        name="username"
-                        // value={username}
-                        // onChange={e => setUsername(e.target.value)}
+        <>
+            <div className={`headerBottom headerBottom-${currentTheme}`}></div>
+            <div className="accountDiv" style={{ backgroundImage: `url(${violinBackground})` }}>
+                <Helmet>
+                    <title>{t('helmetAccount')}</title>
+                </Helmet>
+                <form className={`accountForm accountForm-${currentTheme}`} action="" onSubmit={onsubmit}>
+                    <h2 className={`accountName accountName-${currentTheme}`}>
+                        {t('login')}
+                    </h2>
+                    <TextField
+                        autoFocus
+                        className={classes.margin}
+                        id="Username"
+                        label={t('username')}
+                        InputProps={{
+                            startAdornment: (
+                                <InputAdornment 
+                                    position="start">
+                                    <AccountCircle />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
-                </p>
-                <p>
-                    <input
+                    <TextField
+                        className={classes.margin}
                         type='password'
-                        placeholder='Password'
                         name="password"
-                        // value={password}
-                        // onChange={e => setPassword(e.target.value)}
+                        type='text'
+                        id="Password"
+                        label={t('password')}
+                        InputProps={{
+                            startAdornment: (
+                                <InputAdornment 
+                                    position="start">
+                                    <AccountCircle />
+                                </InputAdornment>
+                            ),
+                        }}
                     />
-                </p>
-                <p>
-                <button type='submit'>login</button>
-                </p>
-            </form> */}
-        </div> 
+                    <Button
+                        className={`loginBtn loginBtn-${currentTheme}`}
+                        type='submit' 
+                        variant="contained" 
+                        color="primary"
+                    >
+                        {t('loginBtn')}
+                    </Button>
+                </form>
+            </div>
+        </> 
     )
 }

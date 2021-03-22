@@ -7,8 +7,8 @@
   left: 0;
   z-index: 100;
   width: 100%;
-  max-width: 1366px;
-  background-color: rosybrown;
+  background-color: #FBBBB9;
+  opacity: .98;
 }
 .nav{
   display: flex;
@@ -18,57 +18,80 @@
     height: 15vmin;
     transform: rotate(45deg);
   }
-  .App-logo-dark {
-    background-image: linear-gradient(to bottom,#fff, #7c5295, #fff);
-  }
-  .Account-logo {
-    height: 30px;
-  }
-  .AccountDiv{
-    display: flex;
-    flex-direction: column;
-    border: 1px dotted #6a0dad;
-    border-radius: 10px;
-    width: 75px;
-    align-items: center;
-    padding-top: 5px;
-  }
-  .AccountDiv-dark{
-    background-image: linear-gradient(to left,#7c5295, #fff, #7c5295);
-    align-items: center;
-    border-radius: 20px;
-  }
+.App-logo-dark {
+  background-image: linear-gradient(to bottom,#fff, #7c5295, #fff);
+}
+.Account-logo {
+  height: 30px;
+}
+.AccountDiv{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #6a0dad;
+  border-radius: 10px;
+  width: 75px;
+  align-items: center;
+  padding-top: 5px;
+}
+.AccountDiv-dark{
+  background-image: linear-gradient(to left,#7c5295, #fff, #7c5295);
+  align-items: center;
+  border-radius: 20px;
+}
+.accountLinkBox{
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
 
-  .langBtn{
-    background-color: rosybrown;
-    color: purple;
-    border: 1px solid #6a0dad;
-    border-radius: 8px;
-  }
-  .buttonDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .languageBtn{
-    display: flex;
-    flex-direction: row;
-  }
+.languagBtn{
+  border: none;
+  background-color: #FBBBB9;
+  color: #6a0dad;
+  font-size: 12px;
+}
+.langBtnSpace{
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+}
+.langBtnSpace-dark{
+  display: none;
+}
+.languagBtn-dark{
+  border: none;
+  border-radius: 12px;
+  padding: 5px;
+  background-image: linear-gradient(to right, #6a0dad, white, #6a0dad);
+}
+.langBtn-active{
+  border-bottom: 2px solid #6a0dad;
+  margin-bottom: 2px;
+}
+.buttonDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.languageBtn{
+  display: flex;
+  flex-direction: row;
+}
 
-  .activeBtn{
-    text-decoration: underline!important;
-  }
+.activeBtn{
+  text-decoration: underline!important;
+}
 
 
-  .navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
 /* dropdown  */
 
@@ -76,7 +99,7 @@
   border: none;
   cursor: pointer;
   font-size: 20px;
-  background-color: rosybrown;
+  background-color: #FBBBB9;
   color: #6a0dad;
   font-family: 'Roboto';
   font-weight: bold;
@@ -91,13 +114,15 @@
   font-size: 20px;
   font-weight: bold;
   background-color: white;
+  transition: transform .5s linear;
 }
 
 .dropbtn:hover{
-  color: #d3d3d3;
+  color: #E42217;
 }
 .dropdown-content-dark{
   background-color: #242526!important;
+  border: .5px solid #6a0dad;
 }
 .dropdown-content {
   display: none;
@@ -109,7 +134,7 @@
 }
 
 .dropdownLink{
-  padding: 12px 16px;
+  margin: 12px 16px;
   text-decoration: none;
   display: block;
 }
@@ -162,6 +187,26 @@
 }
 /* burger */
 
+@media only screen and (max-width: 1080px) {
+  /* .navList{
+    padding-left: 80px!important;
+  } */
+  .App-logo {
+    height: 8vmin;
+    transform: rotate(45deg);
+  }
+  .AppHeader{
+    height: 100px;
+    display: flex;
+    align-items: center;
+  }
+  .coverIframe {
+    top: 42%;
+  }
+  .coverText {
+    bottom: 50%;
+  }
+}
 @media only screen and (max-width: 960px) {
   .navList{
       display: none;
@@ -170,12 +215,21 @@
     display: flex;
     margin: 15px;
   }
+  .nav-dark{
+    background-color: #242526;
+  }
   .nav{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .navList{
+    background-color: #FBBBB9!important;
+  }
+  .navLists-dark{
+    background-color: #242526!important;
   }
   .navList-dark{
     background-color: #242526!important;
@@ -184,7 +238,7 @@
     position: fixed;
     width: 100%;
     height: 300px;
-    background-color: white;
+    background-color: #FBBBB9;
     top: 90px;
     left: -100%;
     z-index: 100;
@@ -205,7 +259,7 @@
     background-color: #242526!important;
   }
   .dropbtn{
-    background-color: white;
+    background-color: #FBBBB9;
   }
   .navAcoount{
     justify-content: flex-end;
@@ -214,13 +268,43 @@
   .navAcoount{
     justify-content: flex-end;
     display: flex;
+  }
+  /* ეს უნდა გავსტილო 480 პიქსელზე  */
+  .dropdown-content{
+    left: 100%;
+    bottom: -150%;
+  }
+  .dropdownLink{
+    display: block;
+    padding-right: 20px;
+  }
+  .dropDownLinkLi{
+    margin: 10px;
   }
 }
 
 
+@media only screen and (max-width: 480px) {
+  .dropdown-content{
+    left: 100%;
+    bottom: -150%;
+    min-width: 80px;
+  }
+  .dropdownLink{
+    display: block;
+    padding: 0px;
+    margin: 0px;
+  }
+  .dropDownLinkLi{
+    margin: 10px;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   .AppHeader{
     height: 100px;
+    display: flex;
+    align-items: center;
   }
   .Account-logo {
     width: 15px;
@@ -241,7 +325,27 @@
     height: 1.5px;
   }
   .langBtn{
-    font-size: 8px;
     border-radius: 10px;
   }
+  .languagBtn{
+    font-size: 10px;
+  }
+}
+
+.outer-div{
+  margin: auto;
+  text-align: center;
+  width: 80px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+.inner-div{
+  width: 30px;
+  height: 30px;
+  border: 1px solid transparent;
+  background-color: black;
+  border-radius: 50px;
+  position: relative;
+  bottom: 1px;
 }

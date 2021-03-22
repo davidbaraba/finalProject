@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import ThemeContext from "./ThemeContext";
 import { makeStyles } from '@material-ui/core/styles';
-import { Button } from "@material-ui/core";
+
+import Brightness4Icon from '@material-ui/icons/Brightness4';
 
 const useStyles = makeStyles({
     ThemeBtn: {
@@ -15,33 +16,34 @@ const useStyles = makeStyles({
 
 export default function ChangeTheme(){
 
+    const [themeBtn, setThemeBtn] = useState('lightMode');
+
     const classes = useStyles();
 
     const {t, i18n} = useTranslation();
 
     const {currentTheme, setCurrentTheme} = useContext(ThemeContext);
 
+
+
     function changeTheme(){
-        setCurrentTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        const theme = currentTheme === 'dark' ? 'light' : 'dark';
+        setCurrentTheme(theme);
+        localStorage.setItem('theme', theme)
     }
 
     return(
         <div className={classes.ThemeBtn}>
-            {/* <Button
-                variant="outlined"
-                size="small"
-                color="primary"
-                className='themeBtn'
+            <div
+                className={`themeBtn themeBtn-${currentTheme}`}
                 onClick={changeTheme}
             >
-                {t('theme-mode')}
-            </Button> */}
-            <button
-                className="themeBtn"
-                onClick={changeTheme}
-            >
-                {t('theme-mode')}
-            </button>
+                <div className="darkIcon">
+                    <abbr title={t('theme-mode')}>
+                        <Brightness4Icon/>
+                    </abbr>
+                </div>
+            </div>
         </div>
     )
 }

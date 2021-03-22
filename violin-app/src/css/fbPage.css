@@ -76,21 +76,11 @@
 }
 @media only screen and (max-width: 960px) {
     .fbName{
-        font-size: 70px;
+        font-size: 60px;
     }
     .fbPostBox{
         padding-bottom: 15px;
     }
-    /* .imgWrap{
-        width: 100%;
-    }
-    .imgImg{
-        width: 100%;
-    }
-    .imgDescription{
-        width: 100%;
-        left: 50%;
-    } */
 }
 @media only screen and (max-width: 600px) {
     .fbPostBox{
@@ -100,17 +90,16 @@
     }
 }
 
-@media only screen and (max-width: 380px) {
-    .imgDescription{
-        width: 300px;
-        height: 380px;
-    }
-}
 @media only screen and (max-width: 360px) {
     .fbName{
-        font-size: 50px;
+        font-size: 40px;
     }
     .imgImg{
-        width: 300px;
+        width: 100%!important;
+    }
+    .imgDescription{
+        width: 100%!important;
+        height: 100%;
+        left: 50%;
     }
 }

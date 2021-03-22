@@ -32,6 +32,7 @@ import photo23 from '../photos/photo23.jpg';
 import photo24 from '../photos/photo24.jpg';
 import photo25 from '../photos/photo25.jpg';
 import photo26 from '../photos/photo26.jpg';
+import { useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -211,21 +212,26 @@ export default function Photo(){
     
     const classes = useStyles();
 
+    const {t} = useTranslation();
+
     return(
-        <div>
-            <Helmet>
-                <title>TinaViolin-B/photo</title>
-            </Helmet>
-            
-            <div className={classes.root} className={`photoDiv photoDiv-${currentTheme}`}>
-                <GridList cellHeight={400} className={classes.gridList} cols={5}>
-                    {mediaData.map((tile) => (
-                        <GridListTile key={tile.img} cols={tile.cols || 1}>
-                            <img src={tile.img} alt={tile.title} />
-                        </GridListTile>
-                    ))}
-                </GridList>
+        <>
+            <div className={`headerBottom headerBottom-${currentTheme}`}></div>
+            <div>
+                <Helmet>
+                    <title>{t('helmetPhoto')}</title>
+                </Helmet>
+                
+                <div className={classes.root} className={`photoDiv photoDiv-${currentTheme}`}>
+                    <GridList cellHeight={400} className={classes.gridList} cols={5}>
+                        {mediaData.map((tile) => (
+                            <GridListTile key={tile.img} cols={tile.cols || 1}>
+                                <img src={tile.img} alt={tile.title} />
+                            </GridListTile>
+                        ))}
+                    </GridList>
+                </div>
             </div>
-        </div>
+        </>
     )
 }

@@ -63,7 +63,7 @@ export default function FbPage(){
                 <div className="imgWrap">
                     <img className="imgImg" src={fbPostImg3}/>
                     <a target="_blank" href="https://www.facebook.com/TikoBarabadzeViolinist/posts/3768725966520301">
-                        <p className="imgDescription">ძალიან მაგარი ამბავი 🥰🥰👊🏻❤️❤️ შინდისი HBO- ზე 😱🥰🥰❤️❤️ საამაყო გუნდი Postred და მიხარია,რომ  დიდი პატივი მხვდა წილად მუსიკალურად გამეხმოვანებინა 🎻❤️🙏🏼 Zviad Mgebry მადლობა შენ  🙏🏼❤️</p>
+                        <p className="imgDescription">ძალიან მაგარი ამბავი 🥰🥰👊🏻❤️❤️ შინდისი HBO- ზე 😱🥰🥰❤️❤️ </p>
                     </a>
                 </div>
                 </Grid>

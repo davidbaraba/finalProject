@@ -38,34 +38,37 @@ export default function AboutMe(){
     const {currentTheme} = useContext(ThemeContext);
 
     return(
-        <Container maxWidth="xl" className={`bioContainer-${currentTheme}`}>
-            <Helmet>
-                <title>TinaViolin-B/biography</title>
-            </Helmet>
-            <Grid container spacing={3}  className={`backColor backColor-${currentTheme}`} >
-                <Grid item md={5} sm={12} xs={12} className="bioImageGrid">
-                    <div className="bioPhoto">
-                        <img className="bioImage" className={classes.biographyPhoto} src={mainPhoto} alt="logo" />
-                    </div>
-                </Grid>
-                <Grid item md={7} sm={12} xs={12} className={classes.bioPar} className={`bioText bioText-${currentTheme}`}>
-                    <h1 className={classes.BioName}>
-                        <div className="responsiveBiograhpyName">
-                            {t('name')}
+        <>
+            <div className={`headerBottom headerBottom-${currentTheme}`}></div>
+            <Container maxWidth="xl" className={`bioContainer-${currentTheme}`}>
+                <Helmet>
+                    <title>{t('helmetBio')}</title>
+                </Helmet>
+                <Grid container spacing={3}  className={`backColor backColor-${currentTheme}`} >
+                    <Grid item md={5} sm={12} xs={12} className="bioImageGrid">
+                        <div className="bioPhoto">
+                            <img className="bioImage" className={classes.biographyPhoto} src={mainPhoto} alt="logo" />
                         </div>
-                        </h1>
-                    
-                    <p>
-                        {t('biographyOne')}
-                    </p>
-                    <p>
-                        {t('biographyTwo')}
-                    </p>
-                    <p>
-                        {t('biographyThird')}
-                    </p>
+                    </Grid>
+                    <Grid item md={7} sm={12} xs={12} className={classes.bioPar} className={`bioText bioText-${currentTheme}`}>
+                        <h1 className={classes.BioName}>
+                            <div className="responsiveBiograhpyName">
+                                {t('name')}
+                            </div>
+                            </h1>
+                        
+                        <p>
+                            {t('biographyOne')}
+                        </p>
+                        <p>
+                            {t('biographyTwo')}
+                        </p>
+                        <p>
+                            {t('biographyThird')}
+                        </p>
+                    </Grid>
                 </Grid>
-            </Grid>
-        </Container>
+            </Container>
+        </>
     )
 }

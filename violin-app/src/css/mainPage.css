@@ -18,7 +18,13 @@
     margin-left: 50px;
     font-family: 'Dancing Script', cursive;
 }
+.coverText-dark{
+    color: #FCDFFF!important;
+}
 
+.coverIframe-dark{
+    border-color: #242526!important;
+}
 .coverIframe{
     position: absolute;
     top: 48%;
@@ -58,6 +64,7 @@
     }
     .coverIframe{
         left: 55%;
+        top: 48%!important;
     }
 }
 @media only screen and (max-width: 890px) {
@@ -84,7 +91,7 @@
         border-radius: 0;
     }
     .coverText-dark{
-        background-color: #242526!important;
+        background-color: black!important;
     }
     .coverText{
         display: flex;
@@ -97,7 +104,6 @@
         transform: none;
     }
     .coverIframe-dark{
-        background-color: #242526!important;
         padding-bottom: 10px;
     }
     .mainPhoto{

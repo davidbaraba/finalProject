@@ -10,6 +10,7 @@ export default function MainPage(){
 
     return(
         <div>
+            <div className={`headerBottom headerBottom-${currentTheme}`}></div>
             <div className="coverPhoto">
                 <img className="mainPhoto" src={mainPhotoCover} alt="cover-photo" />
             </div>

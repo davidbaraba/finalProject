@@ -87,6 +87,12 @@
     .mainVideoContent{
         width: 100%;
     }
+    .mainVideoName{
+        display: none;
+    }
+    .mainVideoNameLink{
+        margin-top: 10px;
+    }
 }
 @media only screen and (max-width: 600px) {
     .videoContentBlock{
@@ -97,16 +103,11 @@
 }
 
 @media only screen and (max-width: 640px) {
-    .mainVideoName{
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
-    }
     .youtubeLink{
         font-size: 15px;
     }
     .youtubeLink:hover{
-        font-size: 20px;
+        font-size: 16px;
     }
     .mainVideoNameLink{
         display: flex;
@@ -114,8 +115,20 @@
     }
 }
 
+@media only screen and (max-width: 380px) {
+    .mainVideoFirst{
+        width: 65%!important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 @media only screen and (max-width: 360px) {
     .iframeBox{
         width: 300px;
+    }
+}
+@media only screen and (max-width: 325px) {
+    .mainVideoFirst{
+        display: none;
     }
 }

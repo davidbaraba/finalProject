@@ -86,91 +86,94 @@ export default function Press(){
     }
 
     return(
-        <div className={`pressContainer pressContainer-${currentTheme}`}>
-            <Helmet>
-                <title>TinaViolin-B/press</title>
-            </Helmet>
-                <form onSubmit={searchSub} className={classes.search}>
-                    <input 
-                        className="searchInt" 
-                        type="text" 
-                        placeholder="Search.."
-                        onChange={(e) => setSearch(e.target.value)}
-                        value={search}
-                    />
-                    <button type="submit" className="responsiveSearchBtn">
-                        <SearchIcon
-                            className="searchBtn"
-                            className="fbIcon"
-                            style={{ fontSize: 20 }}
+        <>
+            <div className={`headerBottom headerBottom-${currentTheme}`}></div>
+            <div className={`pressContainer pressContainer-${currentTheme}`}>
+                <Helmet>
+                    <title>{t('helmetPress')}</title>
+                </Helmet>
+                    <form onSubmit={searchSub} className={classes.search}>
+                        <input 
+                            className="searchInt" 
+                            type="text" 
+                            placeholder="Search.."
+                            onChange={(e) => setSearch(e.target.value)}
+                            value={search}
                         />
-                    </button>
-                </form>
+                        <button type="submit" className="responsiveSearchBtn">
+                            <SearchIcon
+                                className="searchBtn"
+                                className="fbIcon"
+                                style={{ fontSize: 20 }}
+                            />
+                        </button>
+                    </form>
 
-            <h1 className="pressName">
-                {t('pressPageTitle')}
-            </h1>
-            
-            <Container maxWidth="lg" className={classes.PressMainContainer} style={{ backgroundImage: `url(${pressBackground})`}}>
-                <Grid container spacing={3}>
-                        {
-                            posts.map((item) =>(
-                                <Grid key={item.id} item md={4} sm={6} xs={12} className={classes.postBox}>
-                                    <Card className={classes.root} className="responsiveBox">
-                                        <CardActionArea className={`postRootBox-${currentTheme}`}>
-                                            <CardMedia
-                                                component="img"
-                                                alt="concert photo"
-                                                height="250"
-                                                image={item.media}
-                                                title="Contemplative Reptile"
-                                            />
-                                            <CardContent>
-                                                <Typography gutterBottom variant="h5" component="h2">
-                                                    {item.title}
-                                                </Typography>
-                                                <Typography variant="body2" color="textSecondary" component="p" className={`postRootBox-${currentTheme}`}>
-                                                    {item.content.split(' ').splice(0, 30).join(' ') + '...'}
-                                                </Typography>
-                                            </CardContent>
-                                        </CardActionArea>
-                                        <CardActions className={`postRootBox-${currentTheme}`}>
-                                            <Button
-                                                className={`postRootBoxBtn postRootBoxBtn-${currentTheme}`}
-                                                size="small" 
-                                                color="primary"
-                                                component={Link}
-                                                to={'/press/post/' + item.id}
-                                            >
-                                                {t('readMoreBtn')}
-                                            </Button>
-                                        </CardActions>
-                                    </Card>   
-                                </Grid>  
-                            ))
-                        }
-                </Grid>
-                <div className="changePageBtn">
-                    <Button
-                        className={`postRootBoxBtn postRootBoxBtn-${currentTheme}`}
-                        variant="contained"
-                        disabled={page <=1}
-                    >
-                        <Link to={'/press/' + (page - 1)} className={`postRootBoxBtn-${currentTheme}`}>
-                            {t('prevPage')}
-                        </Link>
-                    </Button>
-                    <Button
-                        className={`postRootBoxBtn-${currentTheme}`}
-                        variant="contained"
-                        disabled={page >= totalPage}
-                    >
-                        <Link to={'/press/' + (page + 1)} className={`postRootBoxBtn-${currentTheme}`}>
-                            {t('nextPage')}
-                        </Link>
-                    </Button>
-                </div>
-            </Container>
-        </div>
+                <h1 className="pressName">
+                    {t('pressPageTitle')}
+                </h1>
+                
+                <Container maxWidth="lg" className={classes.PressMainContainer} style={{ backgroundImage: `url(${pressBackground})`}}>
+                    <Grid container spacing={3}>
+                            {
+                                posts.map((item) =>(
+                                    <Grid key={item.id} item md={4} sm={6} xs={12} className={classes.postBox}>
+                                        <Card className={classes.root} className="responsiveBox">
+                                            <CardActionArea className={`postRootBox-${currentTheme}`}>
+                                                <CardMedia
+                                                    component="img"
+                                                    alt="concert photo"
+                                                    height="250"
+                                                    image={item.media}
+                                                    title="Contemplative Reptile"
+                                                />
+                                                <CardContent>
+                                                    <Typography gutterBottom variant="h5" component="h2">
+                                                        {item.title}
+                                                    </Typography>
+                                                    <Typography variant="body2" color="textSecondary" component="p" className={`postRootBox-${currentTheme}`}>
+                                                        {item.content.split(' ').splice(0, 30).join(' ') + '...'}
+                                                    </Typography>
+                                                </CardContent>
+                                            </CardActionArea>
+                                            <CardActions className={`postRootBox-${currentTheme}`}>
+                                                <Button
+                                                    className={`postRootBoxBtn postRootBoxBtn-${currentTheme}`}
+                                                    size="small" 
+                                                    color="primary"
+                                                    component={Link}
+                                                    to={'/press/post/' + item.id}
+                                                >
+                                                    {t('readMoreBtn')}
+                                                </Button>
+                                            </CardActions>
+                                        </Card>   
+                                    </Grid>  
+                                ))
+                            }
+                    </Grid>
+                    <div className="changePageBtn">
+                        <Button
+                            className={`postRootBoxBtn postRootBoxBtn-${currentTheme}`}
+                            variant="contained"
+                            disabled={page <=1}
+                        >
+                            <Link to={'/press/' + (page - 1)} className={`postRootBoxBtn-${currentTheme}`}>
+                                {t('prevPage')}
+                            </Link>
+                        </Button>
+                        <Button
+                            className={`postRootBoxBtn-${currentTheme}`}
+                            variant="contained"
+                            disabled={page >= totalPage}
+                        >
+                            <Link to={'/press/' + (page + 1)} className={`postRootBoxBtn-${currentTheme}`}>
+                                {t('nextPage')}
+                            </Link>
+                        </Button>
+                    </div>
+                </Container>
+            </div>
+        </>
     )
 }
