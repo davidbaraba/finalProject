@@ -63,6 +63,13 @@
     font-size: 30px;
 }
 
+@media only screen and (max-width: 1180px) {
+    .responsiveFooterLeftBoxes{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
 @media only screen and (max-width: 960px) {
     .responsiveFooterLeftBoxes{
         margin: 20px 0;

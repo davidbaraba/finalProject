@@ -188,9 +188,6 @@
 /* burger */
 
 @media only screen and (max-width: 1080px) {
-  /* .navList{
-    padding-left: 80px!important;
-  } */
   .App-logo {
     height: 8vmin;
     transform: rotate(45deg);
@@ -269,7 +266,6 @@
     justify-content: flex-end;
     display: flex;
   }
-  /* ეს უნდა გავსტილო 480 პიქსელზე  */
   .dropdown-content{
     left: 100%;
     bottom: -150%;

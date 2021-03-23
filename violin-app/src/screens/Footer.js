@@ -26,14 +26,14 @@ export default function Footer(){
     return(
         <div>
             <Grid container className={`footerBox footerBox-${currentTheme}`}>
-                <Grid item md={4} xs={12} className={`footerLeftBoxes footerLeftBoxes-${currentTheme}`}>
+                <Grid item md={4} sm={4} xs={12} className={`footerLeftBoxes footerLeftBoxes-${currentTheme}`}>
                     <div className="responsiveFooterLeftBoxes">
                         <p className="leftBox">
                             {t('rights')}
                         </p>
                     </div>
                 </Grid>
-                <Grid item md={4} xs={12} className="footerCenterBoxes center">
+                <Grid item md={4} sm={4} xs={12} className="footerCenterBoxes center">
                     <div className="responsiveFooterLeftBoxes">
                         <Link className="footerCenterFirstBox" to="#">
                             {t('privacy')}
@@ -43,7 +43,7 @@ export default function Footer(){
                         </Link>
                     </div>
                 </Grid>
-                <Grid item md={4} xs={12} className="footerSocialBox">
+                <Grid item md={4} sm={2} xs={12} className="footerSocialBox">
                     <div>
                         <div className={`footerLogoBox footerLogoBox-${currentTheme}`}>
                             <img className="footerLogo" src={violinLogo} />
@@ -64,9 +64,9 @@ export default function Footer(){
                                 </a>
                             </div>
                             <div>
-                                <a target="_blank" href="#">
+                                <Link to='/contact'>
                                     <LocationOnIcon style={{ color: purple[500] }} className="footerIcons"/>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
