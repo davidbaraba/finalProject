@@ -6,7 +6,7 @@ export const TRANSLATIONS_EN = {
     photo: "Photo",
     videoNav: "Video",
     contact: "Contact",
-    themeMode: "Dark/Light",
+    theme: "Dark/Light",
     account: "Account",
     // header
     // biography
@@ -44,6 +44,7 @@ export const TRANSLATIONS_EN = {
     // videoPage
     video: "Videos |",
     visitYoutube: "Visit To My YouTube Channnel",
+    seamore: "Sea More",
     // videoPage
     // pressPage
     pressPageTitle: "PRESS",

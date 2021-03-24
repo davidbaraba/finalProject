@@ -93,7 +93,7 @@ export default function MainVideo(){
                 </Grid>
                 <div className="videoChangeBtn">
                     <Button variant="contained" color="secondary" className={`videoChangeBtnDark-${currentTheme}`}>
-                        <Link to='/video'>Sea More</Link>
+                        <Link to='/video'>{t('seamore')}</Link>
                     </Button>
                 </div>
                 

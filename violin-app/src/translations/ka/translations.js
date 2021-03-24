@@ -6,7 +6,7 @@ export const TRANSLATIONS_KA = {
     photo: "ფოტო",
     videoNav: "ვიდეო",
     contact: "კონტაქტი",
-    themeMode: "დღე/ღამე",
+    theme: "დღე/ღამე",
     account: "ანგარიში",
     // header
     // biography
@@ -44,6 +44,7 @@ export const TRANSLATIONS_KA = {
     // videoPage
     video: "ვიდეოები |",
     visitYoutube: "ეწვიეთ ჩემს YouTube არხს",
+    seamore:"მეტის ნახვა",
     // videoPage
     // pressPage
     pressPageTitle: "პრესა",

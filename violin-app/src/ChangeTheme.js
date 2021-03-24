@@ -39,7 +39,7 @@ export default function ChangeTheme(){
                 onClick={changeTheme}
             >
                 <div className="darkIcon">
-                    <abbr title={t('theme-mode')}>
+                    <abbr title={t('theme')}>
                         <Brightness4Icon/>
                     </abbr>
                 </div>
